@@ -166,7 +166,7 @@ if(!empty($_POST))
 							</div>
 							
 							<div class="form-group">
-								<label for="con_password" class="col-md-3 control-label">Confirmar Password</label>
+								<label for="con_password" class="col-md-3 control-label">Confirmar Contraseña</label>
 								<div class="col-md-9">
 									<input type="password" class="form-control" name="con_password" placeholder="Confirmar Password" required>
 								</div>

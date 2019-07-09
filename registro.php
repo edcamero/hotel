@@ -30,7 +30,7 @@ if(!empty($_POST))
 		{
 			$errors[] = "Dirección de correo inválida";
 			$aviso= "Dirección de correo inválida";
-			print "<script>alert('$aviso')</script>";
+			echo "<script type='text/javascript'>alert(\"$aviso\");</script>";
 		}		
 		
 		
@@ -79,12 +79,18 @@ if(!empty($_POST))
  if ($mysqli->query($query) === TRUE) {
  
 
-  echo "<h5>" . "Hacer Login: " . "<a href='index.php'>Login</a>" . "</h5>"; 
+  echo'<script type="text/javascript">
+alert("USUARIO CREADO CON EXITO");
+window.location.href="index.php";
+</script>';
 
  }
 
  else {
- echo "Error al crear el usuario." . $query . "<br>" . $mysqli->error; 
+ echo'<script type="text/javascript">
+alert("Vuelva a Introducir los datos");
+window.location.href="registro.php";
+</script>';
    }
  
 }
@@ -190,8 +196,7 @@ if(!empty($_POST))
 								<div class="col-md-offset-3 col-md-9">
 									
 									<button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i>Registrar</button> 
-									<div style="float:right; font-size: 105%; position: relative; top:-10px; color: #0900C4"><a id="signinlink" href="index.php">INICIAR SECCION</a></div>
-								</div>
+									
 							</div>
 						</form>
 					</div>

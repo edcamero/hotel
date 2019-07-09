@@ -1,7 +1,7 @@
 
 <?php
-	require 'funcs/conexion.php';
-	include 'funcs/funcs.php';
+	require 'funciones/conexion.php';
+	include 'funciones/funciones.php';
 	
 	session_start(); //Iniciar una nueva sesión o reanudar la existente
 	

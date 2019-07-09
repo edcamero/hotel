@@ -1,6 +1,6 @@
 <?php
-require 'funcs/conexion.php';
-	include 'funcs/funcs.php';
+require 'funciones/conexion.php';
+	include 'funciones/funciones.php';
 
 
 $errors = array();
@@ -22,7 +22,7 @@ if(!empty($_POST))
       if(isNull($id,$nombre,$apellido,$telefono,$direccion, $usuario, $correo,$password, $con_password))
 		{
 			$errors[] = "Debe llenar todos los campos";
-			$aviso= "Dirección de correo inválida";
+			$aviso= "Debe llenar todos los campos";
 			print "<script>alert('$aviso')</script>";
 		}
 
@@ -47,6 +47,12 @@ if(!empty($_POST))
 			$aviso= "El nombre de usuario $usuario ya existe";
 			print "<script>alert('$aviso')</script>";
 		}
+		if(idexiste($id))
+		{
+			$errors[] = "El  $id ya existe";
+			$aviso= "El  $id ya existe";
+			print "<script>alert('$aviso')</script>";
+		}
 		
      if(emailExiste($correo))
 		{
@@ -65,9 +71,10 @@ if(!empty($_POST))
  $form_pass = $_POST['password'];
  
  $hash = md5($form_pass);
+ $rol=2;
 
- $query = "INSERT INTO Usuarios (id,nombre,apellido,telefono,direccion,usuario, password,correo)
-           VALUES ('$_POST[id]','$_POST[nombre]','$_POST[apellido]', '$_POST[telefono]', '$_POST[direccion]', '$_POST[usuario]', '$hash','$_POST[correo]')";
+ $query = "INSERT INTO Usuarios (id,nombre,apellido,telefono,direccion,usuario, password,correo,rol)
+           VALUES ('$_POST[id]','$_POST[nombre]','$_POST[apellido]', '$_POST[telefono]', '$_POST[direccion]', '$_POST[usuario]', '$hash','$_POST[correo]' , '$rol')";
 
  if ($mysqli->query($query) === TRUE) {
  
@@ -99,9 +106,12 @@ if(!empty($_POST))
 		<div class="container">
 			<div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 				<div class="panel panel-info">
-					<div class="panel-heading">
-						<div class="panel-title">Reg&iacute;strate</div>
-						<div style="float:right; font-size: 85%; position: relative; top:-10px"><a id="signinlink" href="index.php">Iniciar Sesi&oacute;n</a></div>
+					<div class="panel panel-primary ">
+					<div class="panel-heading" >
+						<div class='panel-heading text-center'>
+						<div class="panel-title">REGISTRARSE</div>
+						
+					</div>  
 					</div>  
 					
 					<div class="panel-body" >
@@ -178,7 +188,9 @@ if(!empty($_POST))
 							
 							<div class="form-group">                                      
 								<div class="col-md-offset-3 col-md-9">
+									
 									<button id="btn-signup" type="submit" class="btn btn-info"><i class="icon-hand-right"></i>Registrar</button> 
+									<div style="float:right; font-size: 105%; position: relative; top:-10px; color: #0900C4"><a id="signinlink" href="index.php">INICIAR SECCION</a></div>
 								</div>
 							</div>
 						</form>

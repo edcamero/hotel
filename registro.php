@@ -71,7 +71,7 @@ if(!empty($_POST))
  $form_pass = $_POST['password'];
  
  $hash = md5($form_pass);
- $rol=2;
+ $rol="usuario";
 
  $query = "INSERT INTO Usuarios (id,nombre,apellido,telefono,direccion,usuario, password,correo,rol)
            VALUES ('$_POST[id]','$_POST[nombre]','$_POST[apellido]', '$_POST[telefono]', '$_POST[direccion]', '$_POST[usuario]', '$hash','$_POST[correo]' , '$rol')";

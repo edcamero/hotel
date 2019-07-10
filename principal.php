@@ -31,9 +31,9 @@
 			     <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="menu menu--iris">
 						<ul class="nav navbar-nav menu__list">
-							<li class="menu__item"><a href="principal.php" class="menu__link scroll">Inicio</a></li>
-							<li class="menu__item"><a href="#Habitaciones" class="menu__link scroll">Habitaciones</a></li>
-							<li class="menu__item"><a href="index.php" class="menu__link scroll">Login</a></li>
+							<li class="menu__item"><a href="#about" class="menu__link scroll">Inicio</a></li>
+							<li class="menu__item"><a href="#rooms" class="menu__link scroll">Habitaciones</a></li>
+							<li class="menu__item"><a href="#login" class="menu__link scroll">Login</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -66,7 +66,6 @@
 		</div>
 			
 	</div>	
-
 								
 
 </body>

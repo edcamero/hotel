@@ -77,23 +77,6 @@
 			return false;	
 		}
 	}
-	function idexiste($id)
-	{
-		global $mysqli;
-		
-		$stmt = $mysqli->prepare("SELECT id FROM usuarios WHERE id = ? LIMIT 1");
-		$stmt->bind_param("s", $id);
-		$stmt->execute();
-		$stmt->store_result();
-		$num = $stmt->num_rows;
-		$stmt->close();
-		
-		if ($num > 0){
-			return true;
-			} else {
-			return false;	
-		}
-	}
 	
 	
 	

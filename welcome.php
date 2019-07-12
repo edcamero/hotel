@@ -1,4 +1,5 @@
 <?php
+ include_once (dirname( __FILE__ ).'/rutas.php');
 	//Aqui va el código PHP del Vídeo
 ?>
 
@@ -36,7 +37,8 @@
 							<li class='active'><a href='welcome.php'>Inicio</a></li>			
 						</ul>
 						
-						<?php if($_SESSION['tipo_usuario']==1) { ?>
+						<?php //validar usuario admi
+						if(1==1) { ?>
 							<ul class='nav navbar-nav'>
 								<li><a href='#'>Administrar Usuarios</a></li>
 							</ul>
@@ -50,7 +52,8 @@
 			</nav>	
 			
 			<div class="jumbotron">
-				<h2><?php echo 'Bienvenid@ '.utf8_decode($row['nombre']); ?></h1>
+
+				<h2><?php echo 'Bienvenid@ '//.utf8_decode($row['nombre']); ?></h1>
 				<br />
 			</div>
 		</div>

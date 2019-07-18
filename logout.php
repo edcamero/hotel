@@ -1,5 +1,5 @@
 <?php
-	
-	//Aqui va el código PHP del Vídeo
-	
+session_start();
+unset($_SESSION["usuario"]);
+header("location:principal.php");
 ?>

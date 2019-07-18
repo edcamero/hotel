@@ -31,10 +31,9 @@
 			     <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="menu menu--iris">
 						<ul class="nav navbar-nav menu__list">
-						<li class="menu__item"><a href="uprincipal.php" class="menu__link scroll">Inicio</a></li>
+						<li class="menu__item"><a href="principal.php" class="menu__link scroll">Inicio</a></li>
 							<li class="menu__item"><a href="habitaciones.php" class="menu__link scroll">Habitaciones</a></li>
-							<li class="menu__item"><a href="creserva.php" class="menu__link scroll">Reservar</a></li>
-							<li class="menu__item"><a href="logout.php" class="menu__link scroll">cerrar sesion</a></li>
+							<li class="menu__item"><a href="login.php" class="menu__link scroll">Login</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -71,7 +70,7 @@
 							</div>
 							<div class="price-selet">	
 													
-								<a href="creserva.php" >	Reservar ahora
+								<a href="login.php" >	Reservar ahora
 </a>
 							</div>
 						</div>
@@ -96,7 +95,7 @@
 							</div>
 							<div class="price-selet">
 								
-								<a href="creserva.php" >Reservar ahora
+								<a href="login.php" >Reservar ahora
 </a>
 							</div>
 						</div>
@@ -121,7 +120,7 @@
 							</div>
 							<div class="price-selet">
 								
-								<a href="creserva.php" >Reservar ahora
+								<a href="login.php" >Reservar ahora
 </a>
 							</div>
 						</div>

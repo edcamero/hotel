@@ -21,7 +21,6 @@ body a {
 a:hover{
  text-decoration:none;
 }
-
 input[type="button"],input[type="submit"]{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -217,7 +216,7 @@ label.icon-search span {
 /*--//search--*/
 /*-- nav --*/
 .w3_navigation {
-    background: gray;
+    background: #0f2453 ;
 }
 .navbar-default {
     background: none;
@@ -468,7 +467,7 @@ li.menu__item:nth-child(6) {
 /*-- //banner-text --*/
 /*-- banner-top --*/
 .w3layouts-banner-top{
-    background: url(../images/5.jpg) no-repeat 0px 0px;
+    background: url(../images/1.jpg) no-repeat 0px 0px;
     background-size: cover;	
 	-webkit-background-size: cover;	
 	-moz-background-size: cover;
@@ -476,7 +475,7 @@ li.menu__item:nth-child(6) {
 	-moz-background-size: cover;
 }
 .w3layouts-banner-top1{
-	background: url(../images/1.jpg) no-repeat 0px 0px;
+	background: url(../images/2.jpg) no-repeat 0px 0px;
     background-size: cover;	
 	-webkit-background-size: cover;	
 	-moz-background-size: cover;
@@ -484,7 +483,7 @@ li.menu__item:nth-child(6) {
 	-moz-background-size: cover;
 }
 .w3layouts-banner-top2{
-	background: url(../images/12.jpg) no-repeat 0px 0px;
+	background: url(../images/3.jpg) no-repeat 0px 0px;
     background-size: cover;	
 	-webkit-background-size: cover;	
 	-moz-background-size: cover;
@@ -1473,24 +1472,6 @@ text-align:center;
 .gallery-grids {
   margin-top: 50px;
 }
-
-.panel {
-  margin-bottom: 20px;
-  background-color: #fff;
-  border: 3px solid transparent;
-  border-radius: 6px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
-}
-.panel-title {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 20px;
-  color: black;
-}
-.reg{
-
-}
 /*-- //Gallery Section --*/
 /*-- contact --*/
 section.contact-w3ls {
@@ -1503,8 +1484,6 @@ section.contact-w3ls {
 	-o-background-size:100% 100%;
 	-ms-background-size:100% 100%;
 }
-
-
 section.contact-w3ls p.contact-agile1 {
     font-size: 15px;
 	letter-spacing: 1px;

@@ -46,7 +46,7 @@
 	{
 		global $mysqli;
 		
-		$stmt = $mysqli->prepare("SELECT id FROM usuarios WHERE usuario = ? LIMIT 1");
+		$stmt = $mysqli->prepare("SELECT id FROM cliente WHERE usuario= ? LIMIT 1");
 		$stmt->bind_param("s", $usuario);
 		$stmt->execute();
 		$stmt->store_result();
@@ -64,7 +64,7 @@
 	{
 		global $mysqli;
 		
-		$stmt = $mysqli->prepare("SELECT id FROM usuarios WHERE correo = ? LIMIT 1");
+		$stmt = $mysqli->prepare("SELECT id FROM cliente WHERE correo = ? LIMIT 1");
 		$stmt->bind_param("s", $correo);
 		$stmt->execute();
 		$stmt->store_result();
@@ -110,7 +110,7 @@
 	{
 		global $mysqli;
 		
-		$stmt = $mysqli->prepare("SELECT id, id_tipo, password FROM usuarios WHERE usuario = ? || correo = ? LIMIT 1");
+		$stmt = $mysqli->prepare("SELECT id, id_tipo, password FROM cliente WHERE usuario = ? || correo = ? LIMIT 1");
 		$stmt->bind_param("ss", $usuario, $usuario);
 		$stmt->execute();
 		$stmt->store_result();
@@ -118,7 +118,7 @@
 		
 		if($rows > 0) {
 			
-			if(isActivo($usuario)){
+			
 				
 				$stmt->bind_result($id, $id_tipo, $passwd);
 				$stmt->fetch();
@@ -131,17 +131,15 @@
 					$_SESSION['id_usuario'] = $id;
 					$_SESSION['tipo_usuario'] = $id_tipo;
 					
-					header("location: welcome.php");
+					header("location: admin.php");
 					} else {
 					
 					$errors = "La contrase&ntilde;a es incorrecta";
-				}
-				} else {
-				$errors = 'El usuario no esta activo';
-			}
-			} else {
-			$errors = "El nombre de usuario o correo electr&oacute;nico no existe";
-		}
+				
+				
+			       } 
+			   }
+		
 		return $errors;
 	}
 	

@@ -6,7 +6,8 @@ require 'funciones/conexion.php';
 $errors = array();
 if(!empty($_POST))
 {
-		$mysqli=new mysqli("localhost","root","","bdhotel"); 
+		$mysqli=new mysqli("localhost","root","","bd_hotel"); 
+			$tipo_docu_id = $mysqli->real_escape_string($_POST['tipo_docu_id']);
 		$id = $mysqli->real_escape_string($_POST['id']);
 		$nombre = $mysqli->real_escape_string($_POST['nombre']);
 		$apellido = $mysqli->real_escape_string($_POST['apellido']);
@@ -41,12 +42,12 @@ if(!empty($_POST))
 			print "<script>alert('$aviso')</script>";
 		}		
 		
-        if(usuarioExiste($usuario))
+       /* if(usuarioExiste($usuario))
 		{
 			$errors[] = "El nombre de usuario $usuario ya existe";
 			$aviso= "El nombre de usuario $usuario ya existe";
 			print "<script>alert('$aviso')</script>";
-		}
+		}*/
 		
      if(emailExiste($correo))
 		{
@@ -68,16 +69,28 @@ if(!empty($_POST))
  $rol=3;
  $tipo_cliente=1;
 
- $query1 = "INSERT INTO usuario (id,nombre_user,password,rol,tipo_cliente)
-           VALUES ('$_POST[id]','$_POST[usuario]', $hash,$rol)";
 
- $query = "INSERT INTO cliente (id,nombres,apellidos,telefono,direccion,usuario,correo,password,tipo_cliente,rol)
-           VALUES ('$_POST[id]','$_POST[nombre]','$_POST[apellido]', '$_POST[telefono]', '$_POST[direccion]','$_POST[usuario]', '$_POST[correo]', '$_POST[password]', $tipo_cliente,$rol)";
 
- if ($mysqli->query($query) === TRUE) {
+ $query = "INSERT INTO persona (id,nombres,apellidos,direccion,correo,tipo_docu_id)
+           VALUES ('$_POST[id]','$_POST[nombre]','$_POST[apellido]',  '$_POST[direccion]', '$_POST[correo]', '$_POST[tipo_docu_id]')";
+
+ if ($mysqli->multi_query($query) === TRUE) {
+ 	
+ 	
+
+ 	$q="INSERT INTO usuario(id,nombre_user,password,rol)
+           VALUES ('$_POST[id]','$_POST[usuario]',$hash,$rol)";
+           echo $q;
+ 	if ($mysqli->multi_query($q) === TRUE) {
+ 		echo "<h5>" ."<a href=''>Login</a>" . "</h5>"; 
+ 	}
+ 	
+ 	
+
+
  
 
-  echo "<h5>" ."<a href=''>Login</a>" . "</h5>"; 
+  
 
  }
 
@@ -120,6 +133,18 @@ if(!empty($_POST))
 								<p>Error:</p>
 								<span></span>
 							</div>
+							<div class="form-group ">
+                                            <label for="tipo_docu_id" class="col-md-3 control-label">Tipo de Documento</label>
+                                            <div  class="col-md-9">
+                                            <select name="tipo_docu_id" class="form-control " required >
+												<option value selected ></option>
+                                                <option value="1">CC</option>
+                                                <option value="2">TI</option>
+                                                <option value="3">Pasaporte</option>
+                                                
+                                            </select>
+                                            </div>
+                              </div>
 							<div class="form-group">
 								<label for="id" class="col-md-3 control-label">Id:</label>
 								<div class="col-md-9">

@@ -64,7 +64,7 @@
 	{
 		global $mysqli;
 		
-		$stmt = $mysqli->prepare("SELECT id FROM cliente WHERE correo = ? LIMIT 1");
+		$stmt = $mysqli->prepare("SELECT id FROM persona WHERE correo = ? LIMIT 1");
 		$stmt->bind_param("s", $correo);
 		$stmt->execute();
 		$stmt->store_result();

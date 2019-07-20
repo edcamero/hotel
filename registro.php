@@ -76,14 +76,9 @@ if(!empty($_POST))
 
  if ($mysqli->multi_query($query) === TRUE) {
  	
- 	
+ 	 if ($mysqli->multi_query($query) === TRUE) {
 
- 	$q="INSERT INTO usuario(id,nombre_user,password,rol)
-           VALUES ('$_POST[id]','$_POST[usuario]',$hash,$rol)";
-           echo $q;
- 	if ($mysqli->multi_query($q) === TRUE) {
- 		echo "<h5>" ."<a href=''>Login</a>" . "</h5>"; 
- 	}
+ 
  	
  	
 

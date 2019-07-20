@@ -12,6 +12,8 @@
    
 
     <title>Administrator</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=" width=device-width, user-scalable=no,  initial-scale=1.0,  maximum-scale=1.0,  minimum-scale=1.0">
    
     <link href="css/bootstrap.css" rel="stylesheet" />
    
@@ -64,28 +66,12 @@
                     </li>
                     
                     <li>
+
                         <a  href=""><i class="fa fa-qrcode"></i> Gestionar Habitaciones</a>
-                <ul class="nav navbar-top-links navbar-right">
-            
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu ">
-                        <li><a href="usersetting.php"><i class="fa fa-user fa-fw"></i> Perfil del usuario</a>
-                        </li>
-                        <li><a href="settings.php"><i class="fa fa-gear fa-fw"></i> Configuraciones</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar sesión</a>
-                        </li>
-                    </ul>
-                    
-                    <!-- /.dropdown-user -->
-                </li>
-                <!-- /.dropdown -->
-            </ul>
+                
                     </li>
+
+
                     <li>
                         <a  href=""><i class="fa fa-qrcode"></i> Gestionar Descuento</a>
                     </li>

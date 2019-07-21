@@ -1,6 +1,7 @@
 <?php 
 class Tipo_cliente{
     public $id;
+
     public $nombre;
     public $descuento;
 
@@ -9,6 +10,7 @@ class Tipo_cliente{
         $this->id=$id;
         $this->nombre=$nombre;
         $this->descuento=$descuento;
+
 
     }
 

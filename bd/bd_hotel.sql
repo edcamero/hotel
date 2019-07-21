@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-07-2019 a las 16:24:47
+-- Tiempo de generación: 21-07-2019 a las 23:53:44
 -- Versión del servidor: 10.3.16-MariaDB
 -- Versión de PHP: 7.3.7
 
@@ -34,6 +34,13 @@ CREATE TABLE `cliente` (
   `tipo_cliente_id` int(11) NOT NULL,
   `usuario_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`id`, `persona_id`, `tipo_cliente_id`, `usuario_id`) VALUES
+(11111, '11111', 1, 11111);
 
 -- --------------------------------------------------------
 
@@ -80,6 +87,7 @@ CREATE TABLE `hab_reserva` (
 
 CREATE TABLE `imagen` (
   `id` int(11) NOT NULL,
+  `id_tipo_hab` int(11) NOT NULL,
   `nombre_imagen` varchar(30) NOT NULL,
   `descripcion` varchar(100) DEFAULT NULL,
   `ruta_img` varchar(100) NOT NULL
@@ -99,6 +107,13 @@ CREATE TABLE `persona` (
   `correo` varchar(50) NOT NULL,
   `tipo_docu_id` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `persona`
+--
+
+INSERT INTO `persona` (`id`, `nombres`, `apellidos`, `direccion`, `correo`, `tipo_docu_id`) VALUES
+('11111', 'Enyerson Darwin', 'Camero Correa', 'ssssss', 'blade_liger3@hotmail.com', 1);
 
 -- --------------------------------------------------------
 
@@ -189,8 +204,7 @@ CREATE TABLE `tipo_empleado` (
 CREATE TABLE `tipo_habitacion` (
   `id` int(11) NOT NULL,
   `nombre_tipo` varchar(30) NOT NULL,
-  `precio` int(11) NOT NULL,
-  `imagen_id` int(11) NOT NULL
+  `precio` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -212,7 +226,8 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `nombre_user`, `password`, `rol`) VALUES
 (11, 'paquito', 'qwrqwr25q25q25q25h235h125', 3),
-(1092, 'poala', 'e10adc3949ba59abbe56e057f20f883e', 3);
+(1092, 'poala', 'e10adc3949ba59abbe56e057f20f883e', 3),
+(11111, 'enyer', 'e10adc3949ba59abbe56e057f20f883e', 3);
 
 --
 -- Índices para tablas volcadas
@@ -254,7 +269,8 @@ ALTER TABLE `hab_reserva`
 -- Indices de la tabla `imagen`
 --
 ALTER TABLE `imagen`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `imagen_tipo_hab` (`id_tipo_hab`);
 
 --
 -- Indices de la tabla `persona`
@@ -300,8 +316,7 @@ ALTER TABLE `tipo_empleado`
 -- Indices de la tabla `tipo_habitacion`
 --
 ALTER TABLE `tipo_habitacion`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `tipo_habitacion__idx` (`imagen_id`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `usuario`
@@ -344,6 +359,12 @@ ALTER TABLE `hab_reserva`
   ADD CONSTRAINT `hab_reserva_reserva_fk` FOREIGN KEY (`reserva_id`,`reserva_id1`,`reserva_empleado_id`) REFERENCES `reserva` (`id`, `cliente_id`, `empleado_id`);
 
 --
+-- Filtros para la tabla `imagen`
+--
+ALTER TABLE `imagen`
+  ADD CONSTRAINT `imagen_tipo_hab` FOREIGN KEY (`id_tipo_hab`) REFERENCES `tipo_habitacion` (`id`);
+
+--
 -- Filtros para la tabla `persona`
 --
 ALTER TABLE `persona`
@@ -361,12 +382,6 @@ ALTER TABLE `reserva`
 --
 ALTER TABLE `telefonos`
   ADD CONSTRAINT `telefonos_persona_fk` FOREIGN KEY (`persona_id`) REFERENCES `persona` (`id`);
-
---
--- Filtros para la tabla `tipo_habitacion`
---
-ALTER TABLE `tipo_habitacion`
-  ADD CONSTRAINT `tipo_habitacion_imagen_fk` FOREIGN KEY (`imagen_id`) REFERENCES `imagen` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,12 +1,105 @@
 <?php
-require 'rutas.php';
-require  DB.'conexion.php';
-//require 'funciones/conexion.php';
-include 'funciones/funciones.php';
-
-	$errors = array();
+require 'funciones/conexion.php';
+	include 'funciones/funciones.php';
 
 
+$errors = array();
+if(!empty($_POST))
+{
+		$mysqli=new mysqli("localhost","root","","bd_hotel"); 
+			$tipo_docu_id = $mysqli->real_escape_string($_POST['tipo_docu_id']);
+		$id = $mysqli->real_escape_string($_POST['id']);
+		$nombre = $mysqli->real_escape_string($_POST['nombre']);
+		$apellido = $mysqli->real_escape_string($_POST['apellido']);
+		$telefono = $mysqli->real_escape_string($_POST['telefono']);
+		$direccion= $mysqli->real_escape_string($_POST['direccion']);
+		$usuario = $mysqli->real_escape_string($_POST['usuario']);
+		$password = $mysqli->real_escape_string($_POST['password']);
+		$con_password = $mysqli->real_escape_string($_POST['con_password']);
+		$correo = $mysqli->real_escape_string($_POST['correo']);
+/* usuario validacion duplicado */ 
+
+ 
+      if(isNull($id,$nombre,$apellido,$telefono,$direccion, $usuario, $correo,$password, $con_password))
+		{
+			$errors[] = "Debe llenar todos los campos";
+			$aviso= "Dirección de correo inválida";
+			print "<script>alert('$aviso')</script>";
+		}
+
+     if(!isEmail($correo))
+		{
+			$errors[] = "Dirección de correo inválida";
+			$aviso= "Dirección de correo inválida";
+			print "<script>alert('$aviso')</script>";
+		}		
+		
+		
+     if(!validaPassword($password, $con_password))
+		{
+			$errors[] = "Las contraseñas no coinciden";
+			$aviso= "Las contraseñas no coinciden";
+			print "<script>alert('$aviso')</script>";
+		}		
+		
+       /* if(usuarioExiste($usuario))
+		{
+			$errors[] = "El nombre de usuario $usuario ya existe";
+			$aviso= "El nombre de usuario $usuario ya existe";
+			print "<script>alert('$aviso')</script>";
+		}*/
+		
+     if(emailExiste($correo))
+		{
+
+			$errors[] = "El correo electronico $correo ya existe";
+			$aviso=  "El correo electronico correo ya existe";
+			print "<script>alert('$aviso')</script>";
+		
+		}
+
+
+
+    if(count($errors) == 0){
+
+
+ $form_pass = $_POST['password'];
+ 
+ $hash = md5($form_pass);
+ $rol=3;
+ $tipo_cliente=1;
+
+
+
+ $query = "INSERT INTO persona (id,nombres,apellidos,direccion,correo,tipo_docu_id)
+           VALUES ('$_POST[id]','$_POST[nombre]','$_POST[apellido]',  '$_POST[direccion]', '$_POST[correo]', '$_POST[tipo_docu_id]')";
+
+ if ($mysqli->multi_query($query) === TRUE) {
+ 	
+ 	
+
+ 	$q="INSERT INTO usuario(id,nombre_user,password,rol)
+           VALUES ('$_POST[id]','$_POST[usuario]',$hash,$rol)";
+           echo $q;
+ 	if ($mysqli->multi_query($q) === TRUE) {
+ 		echo "<h5>" ."<a href=''>Login</a>" . "</h5>"; 
+ 	}
+ 	
+ 	
+
+
+ 
+
+  
+
+ }
+
+ else {
+ echo "Error al crear el usuario." . $query . "<br>" . $mysqli->error; 
+   }
+ 
+}
+}
 
 ?>
 
@@ -17,13 +110,13 @@ include 'funciones/funciones.php';
 		 <link href="css/bootstrap.css" rel="stylesheet" />
    
       <link href="css/font-awesome.css" rel="stylesheet" />
-     <link href="css/styl.css" rel="stylesheet" />
+     <link href="css/style.css" rel="stylesheet" />
   
     <link href="css/admin-styles.css" rel="stylesheet" />
 
 	</head>
 	
-	<body class="w3layouts-banner-top">
+	<body>
 		<div class="container">
 			<div id="signupbox" style="margin-top:50px" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
 				<div class="panel panel-info">
@@ -34,7 +127,7 @@ include 'funciones/funciones.php';
 					
 					<div class="panel-body" >
 						
-						<form id="signupform" class="form-horizontal" role="form" action="<?php URL_PATH.'uprincipal.php?controller=cliente&action=registrarIndividual'?>" method="POST" autocomplete="off">
+						<form id="signupform" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" autocomplete="off">
 							
 							<div id="signupalert" style="display:none" class="alert alert-danger">
 								<p>Error:</p>

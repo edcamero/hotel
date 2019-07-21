@@ -33,16 +33,17 @@ session_start();
 					<h1><a class="navbar-brand" href="principal.php"> HOTEL <span>ALAMO</span><p class="logo_w3l_agile_caption"><CENTER>&#9733;&#9733;&#9733;&#9733;&#9733;</CENTER></p></a></h1>
 				</div>
 				
-			     <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-					<nav class="menu menu--iris">
-						<ul class="nav navbar-nav menu__list">
-							<li class="menu__item"><a href="principal.php" class="menu__link scroll">Inicio</a></li>
-							<li class="menu__item"><a href="vhabitaciones.php" class="menu__link scroll">Habitaciones</a></li>
-							<li class="menu__item"><a href="login.php" class="menu__link scroll">Login</a></li>
-						</ul>
-					</nav>
-				</div>
 			</nav>
+
+			     <div class="collapse navbar-collapse navbar-right" >
+					
+						<ul class="nav navbar-nav menu__list">
+							<li class="menu__item"><a href="principal.php">Inicio</a></li>
+							<li class="menu__item"><a href="vhabitaciones.php">Habitaciones</a></li>
+							<li class="menu__item"><a href="login.php" >Login</a></li>
+						</ul>
+					
+				</div>
 
 		</div>
 	</div>
@@ -71,7 +72,36 @@ session_start();
 		</div>
 			
 	</div>	
+	<!-- imagen fondo -->
+	<div id="home" class="w3ls-banner">
+		<!-- banner-text -->
+		<div class="slider">
+			<div class="callbacks_container">
+				<ul class="rslides callbacks callbacks1" id="slider4">
+					<li>
+						<div class="w3layouts-banner-top">
+
+							<div class="container">
+								<div class="agileits-banner-info">
+								<h4>HOTEL ALAMO</h4>
+									<h3>ELECTIVA PROFESIONAL</h3>
+										<p>UNIVERSIDAD DE PAMPLONA</p>
 								
+								</div>	
+							</div>
+						</div>
+				</li>
+					
+					
+			</ul>
+		</div>
+			
+	</div>	
+				
+
+
+
+				
 
 </body>
 </html>

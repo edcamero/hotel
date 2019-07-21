@@ -3,6 +3,8 @@
 session_start();
  //require('connect.php');
 ?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,15 +32,15 @@ session_start();
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<h1><a class="navbar-brand" href="principal.php"> HOTEL <span>ALAMO</span><p class="logo_w3l_agile_caption"><CENTER>&#9733;&#9733;&#9733;&#9733;&#9733;</CENTER></p></a></h1>
+					<h1><a class="navbar-brand" href="index.php"> HOTEL <span>ALAMO</span><p class="logo_w3l_agile_caption"><CENTER>&#9733;&#9733;&#9733;&#9733;&#9733;</CENTER></p></a></h1>
 				</div>
 				
 			     <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="menu menu--iris">
 						<ul class="nav navbar-nav menu__list">
-							<li class="menu__item"><a href="principal.php" class="menu__link scroll">Inicio</a></li>
+							<li class="menu__item"><a href="index.php" class="menu__link scroll">Inicio</a></li>
 							<li class="menu__item"><a href="vhabitaciones.php" class="menu__link scroll">Habitaciones</a></li>
-							<li class="menu__item"><a href="login.php" class="menu__link scroll">Login</a></li>
+							<li class="menu__item"><a href="uprincipal.php?controller=usuario&action=login" class="menu__link scroll">Login</a></li>
 						</ul>
 					</nav>
 				</div>

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-07-2019 a las 04:27:16
--- Versión del servidor: 10.1.38-MariaDB
--- Versión de PHP: 7.1.28
+-- Tiempo de generación: 21-07-2019 a las 16:24:47
+-- Versión del servidor: 10.3.16-MariaDB
+-- Versión de PHP: 7.3.7
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `bd_hotel`
+-- Base de datos: `nnn`
 --
 
 -- --------------------------------------------------------
@@ -99,15 +99,6 @@ CREATE TABLE `persona` (
   `correo` varchar(50) NOT NULL,
   `tipo_docu_id` int(2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Volcado de datos para la tabla `persona`
---
-
-INSERT INTO `persona` (`id`, `nombres`, `apellidos`, `direccion`, `correo`, `tipo_docu_id`) VALUES
-('1514142', 'ahhaha', 'hahahsh', 'hshshshsq', 'm-a-c@hotmail.com', 1),
-('15141422', 'ahhaha', 'hahahsh', 'hshshshsq', 'm2-a-c@hotmail.com', 2),
-('15143344', 'ahhaha', 'hahahsh', 'hshshshsq', 'c@hotmail.com', 3);
 
 -- --------------------------------------------------------
 
@@ -216,6 +207,14 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id`, `nombre_user`, `password`, `rol`) VALUES
+(11, 'paquito', 'qwrqwr25q25q25q25h235h125', 3),
+(1092, 'poala', 'e10adc3949ba59abbe56e057f20f883e', 3);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -308,7 +307,8 @@ ALTER TABLE `tipo_habitacion`
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `nombre_user` (`nombre_user`);
 
 --
 -- Restricciones para tablas volcadas

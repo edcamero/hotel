@@ -1,20 +1,22 @@
 
 
 <?php
-require 'funciones/conexion.php';
+require 'rutas.php';
+require  DB.'conexion.php';
+//require 'funciones/conexion.php';
 	include 'funciones/funciones.php';
 	if(!empty($_POST))
 {
 	
-	$mysqli=new mysqli("localhost","root","","bdhotel"); 
-	$usuario = $mysqli->real_escape_string($_POST['usuario']);
-		$password = $mysqli->real_escape_string($_POST['password']);
+	$conexion=Conectar::conexionMySql();
+	$usuario = $conexion->real_escape_string($_POST['usuario']);
+	$password = $conexion->real_escape_string($_POST['password']);
 
 
 
 
 
-$conexion = new mysqli("localhost","root","","bdhotel"); 
+
 
 
 if ($conexion->connect_error) {
@@ -23,11 +25,11 @@ if ($conexion->connect_error) {
 
 $usuario = $_POST['usuario'];
 
-$password = ($_POST['password']);
+$password = md5($_POST['password']);
 
+echo $password;
 
-
-$sql = "SELECT * FROM cliente WHERE usuario = '$usuario' and password='$password'";
+$sql = "SELECT * FROM usuario WHERE nombre_user = '$usuario' and password='$password'";
 
 
 $result = $conexion->query($sql);
@@ -59,15 +61,15 @@ if ($u>0) {
 		<link href="css/bootstrap.css" rel="stylesheet" />
    
       <link href="css/font-awesome.css" rel="stylesheet" />
-     <link href="css/style.css" rel="stylesheet" />
+     <link href="css/styl.css" rel="stylesheet" />
   
     <link href="css/admin-styles.css" rel="stylesheet" />
 		
 	</head>
 	
-	<body>
+	<body class="w3layouts-banner-top">
 		
-		<div class="container">    
+		<div class="container "  >    
 			<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">                    
 				<div class="panel panel-info" >
 					<div class="panel-heading">

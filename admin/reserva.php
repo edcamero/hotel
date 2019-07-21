@@ -18,45 +18,37 @@
    
 </head>
 <body>
-    <div id="wrapper">
+   <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
+
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Navegación de palanca</span>
+                    <span class="sr-only">Navegación de palanca
+</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="admin.php">Reservar Habitacion </a>
-            </div>
-
-            <ul class="nav navbar-top-links navbar-right">
-            
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
-                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                    </a>
-                    <ul class="dropdown-menu dropdown-user">
-                        <li><a href="usersetting.php"><i class="fa fa-user fa-fw"></i> Perfil del usuario</a>
-                        </li>
-                        <li><a href="settings.php"><i class="fa fa-gear fa-fw"></i> Configuraciones</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Cerrar sesión</a>
-                        </li>
-                    </ul>
-                    
-                   
-                </li>
-              
-            </ul>
+                <h1><a class="navbar-brand" href="admin.php"> ADMINISTRADOR<p class="logo_w3l_agile_caption"></p></a></h1>
+           
+           </div>
+           <div class=" navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav class="menu menu--iris">
+                        <ul class="nav navbar-nav menu__list">
+                                <li class="menu__item"><a href="admin.php" class="menu__link scroll">Inicio</a></li>
+                            <li class="menu__item"><a href="" class="menu__link scroll">Cerrar Sesion</a></li>
+                          
+                        </ul>
+                    </nav>
+                </div>
         </nav>
-       
+        <!--/Navegador  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-<li>
-                        <a href="">reserva.php<i class="fa fa-bar-chart-o"></i> Reservar habitacion</a>
+
+          <li>
+                        <a href="reserva.php"><i class="fa fa-qrcode"></i> Reservar habitacion</a>
                     </li>
                     <li>
                         <a  href="adhab.php"><i class="fa fa-qrcode"></i> Añadir Habitacion</a>
@@ -64,8 +56,9 @@
                     
                     <li>
                         <a  href=""><i class="fa fa-qrcode"></i> Gestionar Habitaciones</a>
+
                     </li>
-                    <li>
+                      <li>
                         <a  href=""><i class="fa fa-qrcode"></i> Gestionar Descuento</a>
                     </li>
                     <li>
@@ -75,8 +68,12 @@
                         <a  href="adtipohab.php"><i class="fa fa-qrcode"></i> Agregar Tipo de Habitaciones</a>
                     </li>
                     
+                   
+
 
                     
+         </ul>
+
             </div>
 
         </nav>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html >
 <head>
@@ -8,7 +9,7 @@
     maximum-scale=1.0,
      minimum-scale=1.0">
     <title> HOTEL AlAMO</title>
-    <link href="css/bootstrap.css" rel="stylesheet" />
+      <link href="css/bootstrap.css" rel="stylesheet" />
    
       <link href="css/font-awesome.css" rel="stylesheet" />
      <link href="css/style.css" rel="stylesheet" />
@@ -17,7 +18,7 @@
    
 </head>
 <body>
-    <div id="wrapper">
+   <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
 
@@ -28,14 +29,15 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <h1><a class="navbar-brand" href="creserva.php"> CLIENTE<p class="logo_w3l_agile_caption"></p></a></h1>
+                <h1><a class="navbar-brand" href="sec.php"> Secretaria<p class="logo_w3l_agile_caption"></p></a></h1>
            
            </div>
            <div class=" navbar-right" id="bs-example-navbar-collapse-1">
                     <nav class="menu menu--iris">
                         <ul class="nav navbar-nav menu__list">
-                            <li class="menu__item"><a href="uprincipal.php" class="menu__link scroll">Inicio</a></li>
-                           <li class="menu__item"><a href="" class="menu__link scroll">Cerrar Sesion</a></li>
+                                <li class="menu__item"><a href="sec.php" class="menu__link scroll">Inicio</a></li>
+                            <li class="menu__item"><a href="" class="menu__link scroll">Cerrar Sesion</a></li>
+                          
                         </ul>
                     </nav>
                 </div>
@@ -44,24 +46,31 @@
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-
-                  <li>
-                        <a href="creserva.php"><i class="fa fa-bar-chart-o"></i> Reservar habitacion</a>
+                    <li>
+                        <a href="secreserva.php"><i class="fa fa-bar-chart-o"></i> Reservar habitacion</a>
+                    </li>
+                   
+                    
+                    <li>
+                        <a  href=""><i class="fa fa-qrcode"></i> Consultas</a>
                     </li>
                     <li>
-                        <a  href="chabitaciones.php"><i class="fa fa-qrcode"></i>Habitaciones</a>
+                        <a  href=""><i class="fa fa-qrcode"></i>Dibujar Pantalla</a>
                     </li>
+                    <li>
+                        <a  href=""><i class="fa fa-qrcode"></i> Agregar Habitacion</a>
+                    </li>
+                    
                     
                    
 
 
                     
-                 </ul>
+         </ul>
 
             </div>
 
         </nav>
-       
        
        
         <div id="page-wrapper" >
@@ -77,7 +86,12 @@
                         <div class="panel-body">
 						<form name="form" method="post">
                             
-							 
+							   <div class="form-group">
+                                            <label>Nombre Cliente</label>
+                                            <input type="nombre" class="form-control" name="id_hab" placeholder="Nombre Cliente" required>
+
+                                            
+                               </div>
                                <div class="form-group">
                                             <label>Identificacion Cliente</label>
                                             <input type="id" class="form-control" name="id" placeholder="Identificacion Cliente" required>
@@ -100,28 +114,6 @@
 
                                             
                                </div>
-                               <div class="span3">
-            
-                <div class="control-group">
-                  <label class="control-label">Adultos</label>
-                  <div class="controls">
-                    <select class="span1 select_adults" name="adul" required>
-                      <option />1 <option />2 <option />3 <option />4 <option />5
-                    </select>
-                  </div>
-                </div>
-
-                <div class="control-group">
-                  <label class="control-label">Niños</label>
-                  <div class="controls">
-                    <select class="span1 select_kids" name="nin">
-                      <option />0 <option />1 <option />2 <option />3 <option />4 <option />5
-                    </select>
-                  </div>
-                </div>
-              </div>
-
-              <br/>
                                <div class="form-group">
                              <input type="submit" name="add" value="Realizar Reserva" class="btn btn-primary"> 
                              </div>

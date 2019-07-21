@@ -15,7 +15,7 @@
 </head>
 <body>
 <!-- navegador -->
-<div class="w3_navigation">
+<<div class="w3_navigation">
 		<div class="container">
 			<nav class="navbar navbar-default">
 				<div class="navbar-header navbar-left">
@@ -28,12 +28,12 @@
 					<h1><a class="navbar-brand" href="index.php"> HOTEL <span>ALAMO</span><p class="logo_w3l_agile_caption"><CENTER>&#9733;&#9733;&#9733;&#9733;&#9733;</CENTER></p></a></h1>
 				</div>
 				
-			     <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+			     <div class=" navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="menu menu--iris">
 						<ul class="nav navbar-nav menu__list">
-						<li class="menu__item"><a href="index.php" class="menu__link scroll">Inicio</a></li>
-							<li class="menu__item"><a href="habitaciones.php" class="menu__link scroll">Habitaciones</a></li>
-							<li class="menu__item"><a href="login.php" class="menu__link scroll">Login</a></li>
+							<li class="menu__item"><a href="index.php" class="menu__link scroll">Inicio</a></li>
+							<li class="menu__item"><a href="vhabitaciones.php" class="menu__link scroll">Habitaciones</a></li>
+							<li class="menu__item"><a href="uprincipal.php?controller=usuario&action=login" class="menu__link scroll">Login</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -49,7 +49,7 @@
 				 <div class="container">
 				 <h3 class="title-w3-agileits title-black-wthree">Habitaciones</h3>
 						<div class="priceing-table-main">
-				 <div class="col-md-4 price-grid">
+				 <div class="col-xs-4 col-sd-4 col-md-4 col-lg-4">
 					<div class="price-block agile">
 						<div class="price-gd-top">
 
@@ -77,7 +77,7 @@
 					</div>
 				</div>
 				
-				<div class="col-md-4 price-grid lost">
+				<div class="col-xs-4 col-sd-4 col-md-4 col-lg-4">
 					<div class="price-block agile">
 						<div class="price-gd-top">
 						<img src="images/r3.jpg" alt=" " class="img-responsive" />
@@ -101,7 +101,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 price-grid wthree lost">
+				<div class="col-xs-4 col-sd-4 col-md-4 col-lg-4">
 					<div class="price-block agile">
 						<div class="price-gd-top ">
 							<img src="images/r4.jpg" alt=" " class="img-responsive" />

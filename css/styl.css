@@ -8,7 +8,7 @@ html, body{
 	margin:0;
 	font-size: 100%;
 	font-family: 'Lato', sans-serif;
-	background: #fff;
+	
 }
 body a {
 	text-decoration:none;
@@ -1476,7 +1476,8 @@ text-align:center;
 
 .panel {
   margin-bottom: 20px;
-  background-color: #fff;
+  background: rgba(0, 0, 0, .5);
+  color: #FFF;
   border: 3px solid transparent;
   border-radius: 6px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);

@@ -9,12 +9,12 @@
 			//$conexion->query("SET NAMES 'utf8'");
 			
 			
-			return $mbd = new PDO('mysql:host=localhost;dbname=bd_hotel', "root", "");
+			return $mbd = new PDO('mysql:host=localhost;dbname=nnn', "root", "");
 			
 		}
 
 		public static function conexionMySql(){
-			$baseDatos="bd_hotel";
+			$baseDatos="nnn";
 			$conexion = new mysqli("localhost","root","",$baseDatos); 
 			$conexion->query("SET NAMES 'utf8'");
 			return $conexion;

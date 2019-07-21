@@ -20,7 +20,7 @@ function agregarImagen(Imagen $img){
   
 }
 
-function listar(){
+function static listar(){
     $listaTipoHab =[];
     $db=Conectar::conexion();
     $sql=$db->query('SELECT * FROM tipo_habitacion');

@@ -312,7 +312,7 @@ p.logo_w3l_agile_caption {
 }
 /*-- nav-effect --*/
 .menu__list {
-    position: absolute;
+    position: relative;
     margin: 0.69em 0 0;
 }
 
@@ -359,7 +359,7 @@ li.menu__item:nth-child(6) {
 	color:#ffce14;
 }
 
-
+.menu--iris .menu__link::before,
 .menu--iris .menu__link::after {
 	content: '';
 	position: absolute;
@@ -373,9 +373,28 @@ li.menu__item:nth-child(6) {
 	transition-timing-function: cubic-bezier(0.17, 0.67, 0.05, 1.29);
 }
 
+.menu--iris .menu__link::before {
+	top: 0;
+	left: 0;
+	border-width: 2px 0 0 2px;
+	-webkit-transform: translate3d(10px, 10px, 0);
+	transform: translate3d(10px, 10px, 0);
+}
 
+.menu--iris .menu__link::after {
+	right: 0;
+	bottom: 0;
+	border-width: 0 2px 2px 0;
+	-webkit-transform: translate3d(-10px, -10px, 0);
+	transform: translate3d(-10px, -10px, 0);
+}
 
-
+.menu--iris .menu__item--current .menu__link::before,
+.menu--iris .menu__item--current .menu__link::after,.menu__link:hover::before,.menu__link:hover::after {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
 /*-- //nav-effect --*/
 /*-- //header --*/
 /*-- banner-text --*/ 
@@ -2318,7 +2337,9 @@ color: #fff !important;
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
 		border: none;
 	}
-	
+	.nav > li > a {
+		display: inline-block;
+	}
 	.navbar-collapse {
 		box-shadow: none;
 	}

@@ -59,7 +59,7 @@ class ClienteController{
 		
 		}
 
-		echo count($this->errors);
+		
 
         if(count($this->errors) <2){
 
@@ -71,9 +71,9 @@ class ClienteController{
 		$tipo_cliente=1;
 		//($cedula, $nombres, $apellidos, $direccion,$correo,$tipo_docu_id,$tipo_cliente,$id_usuario,$nombre_user,$password,$rol);
 		$cliente_nuevo=new Cliente($id,$nombre,$apellido,$direccion,$correo,$tipo_docu_id,$tipo_cliente,$id,$usuario,$password,$rol);
-		echo $nombre;
+		
 		Cliente::agregar($cliente_nuevo);
-		echo "llegue";
+		$mensaje='Cliente Agregado con exito';
 
     		}
 		}

@@ -50,8 +50,7 @@ class Persona{
 
     public static function agregar($persona){
         $db=Conectar::conexion();
-        echo $persona->cedula;
-        echo '<br>';
+        
         try {  
         $insert=$db->prepare('INSERT INTO persona VALUES(:id,:nombres,:apellcedulaos,:direccion,:correo,:tipo_docu_id)');
         $insert->bindValue('id',$persona->cedula);

@@ -44,7 +44,7 @@ if ($u>0) {
 	    $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
 		
     echo "Bienvenido! " . $_SESSION['usuario'];
-    echo "<br><br><a href=creserva.php>Panel de Control</a>"; 
+    echo "<br><br><a href=uprincipal.php>Panel de Control</a>"; 
 
   
  }else { 

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html >
 <head>
@@ -9,7 +8,7 @@
     maximum-scale=1.0,
      minimum-scale=1.0">
     <title> HOTEL AlAMO</title>
-      <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap.css" rel="stylesheet" />
    
       <link href="css/font-awesome.css" rel="stylesheet" />
      <link href="css/style.css" rel="stylesheet" />
@@ -21,48 +20,53 @@
     <div id="wrapper">
         <nav class="navbar navbar-default top-navbar" role="navigation">
             <div class="navbar-header">
+
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Navegación de palanca</span>
+                    <span class="sr-only">Navegación de palanca
+</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="admin.php">Cliente </a>
-
-            </div>
-            <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-          <nav class="menu menu--iris">
-            <ul class="nav navbar-nav menu__list">
-              <li class="menu__item"><a href="index.php" class="menu__link scroll">Inicio</a></li>
-            
-          
-              <li class="menu__item"><a href="logout.php" class="menu__link scroll">cerrar sesion</a></li>
-            </ul>
-          </nav>
-        </div>
-      </nav>
-
-            
+                <h1><a class="navbar-brand" href="creserva.php"> CLIENTE<p class="logo_w3l_agile_caption"></p></a></h1>
+           
+           </div>
+           <div class=" navbar-right" id="bs-example-navbar-collapse-1">
+                    <nav class="menu menu--iris">
+                        <ul class="nav navbar-nav menu__list">
+                            <li class="menu__item"><a href="uprincipal.php" class="menu__link scroll">Inicio</a></li>
+                           <li class="menu__item"><a href="" class="menu__link scroll">Cerrar Sesion</a></li>
+                        </ul>
+                    </nav>
+                </div>
         </nav>
-       
+        <!--/Navegador  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-<li>
+
+                  <li>
                         <a href="creserva.php"><i class="fa fa-bar-chart-o"></i> Reservar habitacion</a>
                     </li>
                     <li>
-                        <a  href="habitaciones.php"><i class="fa fa-qrcode"></i>Habitaciones</a>
+                        <a  href="chabitaciones.php"><i class="fa fa-qrcode"></i>Habitaciones</a>
                     </li>
                     
-             
-                    
+                   
+
 
                     
+                 </ul>
+
             </div>
 
         </nav>
-        <div class="plans-section" id="rooms">
+       
+       
+       
+        <div id="page-wrapper" >
+            <div id="page-inner">
+
          <div class="container">
          <h3 class="title-w3-agileits title-black-wthree">Habitaciones</h3>
             <div class="priceing-table-main">
@@ -144,15 +148,23 @@
           </div>
         </div>
         <div class="clearfix"> </div>
-       
-        
-           
+      </div>
+    </div>
+
+
 			 
                  
-                                 
           
+				
                 
-        
+            </div>
+           
+                
+                </div>
+                    
+            
+				
+					</div>
 			
             </div>
       

@@ -62,14 +62,12 @@
 	
 	function emailExiste($correo)
 	{
-		global $mysqli;
+		$mysqli=Conectar::conexion(); 
 		
-		$stmt = $mysqli->prepare("SELECT id FROM persona WHERE correo = ? LIMIT 1");
-		$stmt->bind_param("s", $correo);
+		$stmt = $mysqli->prepare("SELECT id FROM persona WHERE correo = :correo LIMIT 1");
+		$stmt->bindValue('correo',$correo);
+		$num = $stmt->columnCount();
 		$stmt->execute();
-		$stmt->store_result();
-		$num = $stmt->num_rows;
-		$stmt->close();
 		
 		if ($num > 0){
 			return true;

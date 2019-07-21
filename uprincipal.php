@@ -45,7 +45,7 @@ session_start();
 					<h1><a class="navbar-brand" href="uprincipal.php"> HOTEL <span>ALAMO</span><p class="logo_w3l_agile_caption"><CENTER>&#9733;&#9733;&#9733;&#9733;&#9733;</CENTER></p></a></h1>
 				</div>
 				
-			     <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+			     <div class="  navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="menu menu--iris">
 						<ul class="nav navbar-nav menu__list">
 							<li class="menu__item"><a href="uprincipal.php" class="menu__link scroll">Inicio</a></li>

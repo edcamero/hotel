@@ -34,7 +34,7 @@ include 'funciones/funciones.php';
 					
 					<div class="panel-body" >
 						
-						<form id="signupform" class="form-horizontal" role="form" action="<?php URL_PATH.'uprincipal.php?controller=cliente&action=registrarIndividual'?>" method="POST" autocomplete="off">
+						<form id="signupform" class="form-horizontal" role="form" action="uprincipal.php?controller=cliente&action=registrarIndividual" method="POST" autocomplete="off">
 							
 							<div id="signupalert" style="display:none" class="alert alert-danger">
 								<p>Error:</p>

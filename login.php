@@ -82,7 +82,7 @@ if ($u>0) {
 						
 						<div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
 						
-						<form id="loginform" class="form-horizontal" role="form" action="<?php $_SERVER['PHP_SELF'] ?>" method="POST" autocomplete="off">
+						<form id="loginform" class="form-horizontal" role="form" action="uprincipal.php" method="POST" autocomplete="off">
 							
 							<div style="margin-bottom: 25px" class="input-group">
 								<label for="usuario" class="control-label text-white">Usuario</label>

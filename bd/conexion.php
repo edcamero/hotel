@@ -1,7 +1,12 @@
 <?php
 	
 	class Conectar{
-		static $baseDatos="bd_hotel";
+		public $baseDatos="u535867201_hotel ";
+		public $usuario="u535867201_root";
+		static $host="server184.hostinger.co";
+		static $password="123456";
+
+
 		
 
 		public static function conexion(){
@@ -9,13 +14,13 @@
 			//$conexion->query("SET NAMES 'utf8'");
 			
 			
-			return $mbd = new PDO('mysql:host=localhost;dbname=nnn', "root", "");
+			return $mbd = new PDO('mysql:host=.$host;dbname=.$baseDatos',$usuario, $password);
 			
 		}
 
 		public static function conexionMySql(){
 			$baseDatos="nnn";
-			$conexion = new mysqli("localhost","root","",$baseDatos); 
+			$conexion = new mysqli($host,$usuario,$password,$baseDatos); 
 			$conexion->query("SET NAMES 'utf8'");
 			return $conexion;
 		}

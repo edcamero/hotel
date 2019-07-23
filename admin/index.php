@@ -1,4 +1,4 @@
-﻿ <?php 
+<?php 
  require_once("../rutas.php");
  ?>
  <!DOCTYPE html>
@@ -20,64 +20,16 @@
    
 </head>
 <body>
+
+    
+    
     <div id="wrapper">
-        <nav class="navbar navbar-default top-navbar" role="navigation">
-            <div class="navbar-header">
-
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Navegación de palanca
-                    </span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <h1><a class="navbar-brand" href="admin.php"> ADMINISTRADOR<p class="logo_w3l_agile_caption"></p></a></h1>
-           
-           </div>
-           <div class=" navbar-right" id="bs-example-navbar-collapse-1">
-                    <nav class="menu menu--iris">
-                        <ul class="nav navbar-nav menu__list">
-                            <li class="menu__item"><a href="admin.php" class="menu__link scroll">Inicio</a></li>
-                           <li class="menu__item"><a href=<?php echo URL_PATH."uprincipal.php?controller=sesion&action=logout"?> class="menu__link scroll">Cerrar Sesion</a></li>
-                        </ul>
-                    </nav>
-                </div>
-        </nav>
+         <?php require_once("menu.php");?>
         <!--/Navegador  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-
-                    <li>
-                        <a href="reserva.php"><i class="fa fa-qrcode"></i> Reservar habitacion</a>
-                    </li>
-                    <li>
-                        <a  href="adhab.php"><i class="fa fa-qrcode"></i> Añadir Habitacion</a>
-                    </li>
-                    
-                    <li>
-                        <a  href=""><i class="fa fa-qrcode"></i> Gestionar Habitaciones</a>
-
-                    </li>
-                      <li>
-                        <a  href=""><i class="fa fa-qrcode"></i> Gestionar Descuento</a>
-                    </li>
-                    <li>
-                        <a  href=""><i class="fa fa-qrcode"></i> Calcular Ganancias</a>
-                    </li>
-                    <li>
-                        <a  href="adtipohab.php"><i class="fa fa-qrcode"></i> Agregar Tipo de Habitaciones</a>
-                    </li>
-                    
-                   
-
-
-                    
-                 </ul>
-
-            </div>
-
-        </nav>
+    
+        
+        
+        <?php require_once("menu-vertical.php");?>
        
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper">
@@ -87,7 +39,7 @@
                
              </div>
          </div>
-   
+    </div>
 				
 
 </body>

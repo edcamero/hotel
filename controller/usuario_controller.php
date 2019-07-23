@@ -11,8 +11,8 @@ class UsuarioController
     }
 
     public function login(){
-        require 'rutas.php';
-        require  DB.'conexion.php';
+        
+      
         //require 'funciones/conexion.php';
             include 'funciones/funciones.php';
                 if(!empty($_POST))

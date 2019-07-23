@@ -13,6 +13,8 @@ if(isset($controller)){
             case 'cliente':
                 $controller=new ClienteController();
                 break;
+            case 'sesion':
+                $controller=new SesionController();
     
         }
         //llama a la acción del controlador
@@ -24,7 +26,8 @@ if(isset($controller)){
     //array con los controladores y sus respectivas acciones
     $controllers= array(
                         'usuario'=>['index','register','update', 'delete','login','registrarIndividual'],
-                        'cliente'=>['registrarIndividual']
+                        'cliente'=>['registrarIndividual'],
+                        'sesion'=>['login','logout']
                         );
     //verifica que el controlador enviado desde index.php esté dentro del arreglo controllers
     if (array_key_exists($controller, $controllers)) {

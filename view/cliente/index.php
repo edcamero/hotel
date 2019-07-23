@@ -35,7 +35,7 @@
 							<li class="menu__item"><a href="uprincipal.php" class="menu__link scroll">Inicio</a></li>
 							<li class="menu__item"><a href="habitaciones.php" class="menu__link scroll">Habitaciones</a></li>
 							<li class="menu__item"><a href="creserva.php" class="menu__link scroll">Reservar</a></li>
-							<li class="menu__item"><a href="logout.php" class="menu__link scroll">cerrar sesion</a></li>
+							<li class="menu__item"><a href="uprincipal.php?controller=sesion&action=logout" class="menu__link scroll">cerrar sesion</a></li>
 						</ul>
 					</nav>
 				</div>

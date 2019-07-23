@@ -15,8 +15,13 @@
 		
 		session_start();
 		if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] ) {
+			
+			
 			require_once(VIEW.'cliente/index.php');
+		}else{
+			header("location:uprincipal.php?controller=sesion&action=login");
 		}
+
 	}	
 	require_once("controlador.php");
 	

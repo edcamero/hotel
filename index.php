@@ -34,7 +34,7 @@
 						<ul class="nav navbar-nav menu__list">
 							<li class="menu__item"><a href="index.php" class="menu__link scroll">Inicio</a></li>
 							<li class="menu__item"><a href="vhabitaciones.php" class="menu__link scroll">Habitaciones</a></li>
-							<li class="menu__item"><a href="uprincipal.php?controller=usuario&action=login" class="menu__link scroll">Login</a></li>
+							<li class="menu__item"><a href="uprincipal.php?controller=sesion&action=login" class="menu__link scroll">Login</a></li>
 						</ul>
 					</nav>
 				</div>

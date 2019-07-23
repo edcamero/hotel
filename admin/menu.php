@@ -1,6 +1,6 @@
 <?php>
-<nav class="navbar navbar-default top-navbar" role="navigation">
-<div class="navbar-header">
+<nav class="navbar menu navbar-expand-lg top-navbar" role="navigation">
+<div class="navbar-header ">
 
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
         <span class="sr-only">Navegación de palanca
@@ -9,8 +9,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
     </button>
-    <h2><a class="navbar-brand " href="admin.php">ADMIN</a></h2>
     
+    <nav class="menu menu--iris">
+            <ul class="nav navbar-nav menu__list">
+                <li class="col mt-5"><a class="navbar-brand ml-4" href="#">Admin</a></li>
+    
+             </ul>
+        </nav>
+   
+
 </div>
 <div class=" navbar-right" id="bs-example-navbar-collapse-1">
         <nav class="menu menu--iris">
@@ -19,5 +26,6 @@
                <li class="menu__item"><a href=<?php echo URL_PATH."uprincipal.php?controller=sesion&action=logout"?> class="menu__link scroll">Cerrar Sesion</a></li>
             </ul>
         </nav>
-    </div>
+</div>
+
 </nav>

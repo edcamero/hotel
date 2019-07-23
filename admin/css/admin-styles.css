@@ -248,12 +248,15 @@ margin:0px;
 .top-navbar .navbar-brand {
 color: #fff;
 width: 260px;
-text-align: left;
+text-align: center;
 height: 60px;
 font-size: 30px;
 font-weight: 700;
+
 text-transform: uppercase;
-line-height: 30px;
+justify-content: center;
+align-items: center;
+
 }
 .top-navbar .nav > li {
 position: relative;

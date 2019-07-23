@@ -39,14 +39,15 @@ class UsuarioController
                         $u=mysqli_affected_rows($conexion);//si el usuario digito bien el usuario y contraseña $u da el numero 1 y entra de lo contrario da el numero cero
 
                         if ($u>0) {   
-                                
+                              
                             $_SESSION['loggedin'] = true;
                             $_SESSION['usuario'] = $usuario;
                             $_SESSION['start'] = time();
                             $_SESSION['expire'] = $_SESSION['start'] + (60 * 60);
-                                
-                            echo "Bienvenido! " . $_SESSION['usuario'];
-                            echo "<br><br><a href=uprincipal.php>Panel de Control</a>"; 
+                            $userdb = $result->fetch_assoc();
+                            $_SESSION['id']=$userdb['id'];
+                             
+                            header('Location:'.URL_PATH.'uprincipal.php');
 
                         }else { 
                             
@@ -55,7 +56,7 @@ class UsuarioController
                         }
                     }else
                     {
-                        echo 'llame al login';
+                        require_once(VIEW."cliente/login.php");
                     }
  
     }

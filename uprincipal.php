@@ -1,4 +1,6 @@
 <?php 
+
+
 	// la variable controller guarda el nombre del controlador y action guarda la acción por ejemplo registrar 
 	//si la variable controller y action son pasadas por la url desde layout.php entran en el if
 	require_once("rutas.php");
@@ -8,13 +10,17 @@
 		$action=$_GET['action'];
 
 		
-	} else {
-		header('login.php');
+	} else 
+	{
+		
+		session_start();
+		if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] ) {
+			require_once(VIEW.'cliente/index.php');
+		}
 	}	
 	require_once("controlador.php");
 	
 	
 
-session_start();
- //require('connect.php');
+
 ?>

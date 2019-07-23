@@ -18,7 +18,7 @@ if(isset($controller)){
         //llama a la acción del controlador
         $controller->{$action}();
     
-        echo "entro a controllar y ejecuta";
+       
     }
     
     //array con los controladores y sus respectivas acciones

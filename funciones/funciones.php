@@ -256,6 +256,7 @@
 		}
 	}
 	
+	
 	function cambiaPassword($password, $user_id, $token){
 		
 		global $mysqli;

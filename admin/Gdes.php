@@ -29,13 +29,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <h1><a class="navbar-brand" href="admin.php"> ADMINISTRADOR<p class="logo_w3l_agile_caption"></p></a></h1>
+                <h1><a class="navbar-brand" href="index.php"> ADMIN<p class="logo_w3l_agile_caption"></p></a></h1>
            
            </div>
            <div class=" navbar-right" id="bs-example-navbar-collapse-1">
                     <nav class="menu menu--iris">
                         <ul class="nav navbar-nav menu__list">
-                            <li class="menu__item"><a href="admin.php" class="menu__link scroll">Inicio</a></li>
+                            <li class="menu__item"><a href="index.php" class="menu__link scroll">Inicio</a></li>
                            <li class="menu__item"><a href="" class="menu__link scroll">Cerrar Sesion</a></li>
                         </ul>
                     </nav>
@@ -46,26 +46,23 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 
-                    <li>
-                        <a href="reserva.php"><i class="fa fa-qrcode"></i> Reservar habitacion</a>
-                    </li>
-                    <li>
-                        <a  href="adhab.php"><i class="fa fa-qrcode"></i> Añadir Habitacion</a>
-                    </li>
-                    
-                    <li>
-                        <a  href=""><i class="fa fa-qrcode"></i> Gestionar Habitaciones</a>
+       <li>
+             <a  href="Ghab.php"><i class="fa fa-qrcode"></i> Gestionar Habitaciones</a>
 
-                    </li>
-                      <li>
-                        <a  href=""><i class="fa fa-qrcode"></i> Gestionar Descuento</a>
-                    </li>
-                    <li>
-                        <a  href=""><i class="fa fa-qrcode"></i> Calcular Ganancias</a>
-                    </li>
-                    <li>
-                        <a  href="adtipohab.php"><i class="fa fa-qrcode"></i> Agregar Tipo de Habitaciones</a>
-                    </li>
+         </li>
+           <li>
+             <a  href="Gdes.php"><i class="fa fa-qrcode"></i> Gestionar Descuento</a>
+         </li>
+         <li>
+             <a  href="Ggan.php"><i class="fa fa-qrcode"></i> Calcular Ganancias</a>
+         </li>
+         <li>
+             <a  href="Gtipohab.php"><i class="fa fa-qrcode"></i> Agregar Tipo de Habitaciones</a>
+         </li>
+          <li>
+             <a  href="Gtipocli.php"><i class="fa fa-qrcode"></i> Agregar Nuevo cliente</a>
+         </li>
+         
                     
                    
 
@@ -87,26 +84,26 @@
                 <div class="col-md-5 col-sm-5">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                         Agregar Nueva Habitacion
+                         Modificar Descuento Cliente
 
                         </div>
                         
                         <div class="panel-body">
 						<form name="form" method="post">
                             <div class="form-group">
-                                            <label> Tipo de habitación</label>
+                                            <label> Tipo de Cliente</label>
                                             <select name="tipo"  class="form-control" required>
 												<option value selected ></option>
-                                                <option value="Simple">Simple</option>
-                                                <option value="Doble">Doble</option>
-												<option value="Matrimonial">Matrimonial</option>
+                                                <option value="1">Habitual</option>
+                                                <option value="2">Esporadico</option>
+												
 												
                                             </select>
                               </div>
 							  
 								<div class="form-group">
-                                            <label>Id Habitacion</label>
-                                            <input type="id_hab" class="form-control" name="id_hab" placeholder="Numero habitación" required>
+                                            <label>Nuevo Descuento</label>
+                                            <input type="desc" class="form-control" name="desc" placeholder="Descuento Cliente" required>
 
                                             
                                </div>
@@ -122,13 +119,12 @@
                                     <thead>
                                         <tr>
                                              <th>Id</th>
-                                            <th>Nombre</th>
-                                            <th>Tipo</th>
-                                            <th>Precio</th>
+                                           <th>Tipo</th>
+                                            <th>descuento</th>
                                            
                                         </tr>
                                     </thead>
-                                    <tbody id="listahabitacion">
+                                    <tbody id="listadescuento">
                                         
                                     </tbody>
                                 </table>

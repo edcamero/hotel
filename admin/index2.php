@@ -48,9 +48,7 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 
-                    <li>
-                        <a href="reserva.php"><i class="fa fa-qrcode"></i> Reservar habitacion</a>
-                    </li>
+                    
                     <li>
                         <a  href="adhab.php"><i class="fa fa-qrcode"></i> Añadir Habitacion</a>
                     </li>

@@ -34,13 +34,13 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <h1><a class="navbar-brand" href="admin.php"> ADMINISTRADOR<p class="logo_w3l_agile_caption"></p></a></h1>
+                <h1><a class="navbar-brand" href="index.php"> ADMIN<p class="logo_w3l_agile_caption"></p></a></h1>
            
            </div>
            <div class=" navbar-right" id="bs-example-navbar-collapse-1">
                     <nav class="menu menu--iris">
                         <ul class="nav navbar-nav menu__list">
-                                <li class="menu__item"><a href="admin.php" class="menu__link scroll">Inicio</a></li>
+                                <li class="menu__item"><a href="index.php" class="menu__link scroll">Inicio</a></li>
                             <li class="menu__item"><a href="" class="menu__link scroll">Cerrar Sesion</a></li>
                           
                         </ul>
@@ -52,27 +52,24 @@
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 
-                    <li>
-                        <a href="reserva.php"><i class="fa fa-qrcode"></i> Reservar habitacion</a>
-                    </li>
-                    <li>
-                        <a  href="adhab.php"><i class="fa fa-qrcode"></i> Añadir Habitacion</a>
-                    </li>
-                    
-                    <li>
-                        <a  href=""><i class="fa fa-qrcode"></i> Gestionar Habitaciones</a>
+                   
+          <li>
+             <a  href="Ghab.php"><i class="fa fa-qrcode"></i> Gestionar Habitaciones</a>
 
-                    </li>
-                      <li>
-                        <a  href=""><i class="fa fa-qrcode"></i> Gestionar Descuento</a>
-                    </li>
-                    <li>
-                        <a  href=""><i class="fa fa-qrcode"></i> Calcular Ganancias</a>
-                    </li>
-                    <li>
-                        <a  href="adtipohab.php"><i class="fa fa-qrcode"></i> Agregar Tipo de Habitaciones</a>
-                    </li>
-                    
+         </li>
+           <li>
+             <a  href="Gdes.php"><i class="fa fa-qrcode"></i> Gestionar Descuento</a>
+         </li>
+         <li>
+             <a  href="Ggan.php"><i class="fa fa-qrcode"></i> Calcular Ganancias</a>
+         </li>
+         <li>
+             <a  href="Gtipohab.php"><i class="fa fa-qrcode"></i> Agregar Tipo de Habitaciones</a>
+         </li>
+          <li>
+             <a  href="Gtipocli.php"><i class="fa fa-qrcode"></i> Agregar Nuevo cliente</a>
+         </li>
+             
                    
 
 
@@ -89,13 +86,13 @@
           
 			 <div class="col-md-5 col-sm-5  ">
                     <div class="panel panel-primary">
-                  <div class="panel-heading">AGREGAR TIPO HABITACION</div>
+                  <div class="panel-heading">AGREGAR TIPO CLIENTE</div>
                     <div class="panel-body">
 						 <form name="form" method="post">
                             <div class="form-group">
-                             <label> Tipo Habitacion</label>
+                             <label> Tipo Cliente</label>
                                             
-                                    <input type="id_tipo" class="form-control" name="id_tipo" placeholder="Tipo Habitacion" required>
+                                    <input type="id_tipoc" class="form-control" name="id_tipoc" placeholder="Tipo Cliente" required>
                               
                             </div>
 							  
@@ -105,6 +102,7 @@
                    
                         
                     </div>
+
                
                 
                   
@@ -119,6 +117,22 @@
 							  
 							   
                  </div>
+                 <div class="box-content">
+                                <table class="table table-striped table-bordered bootstrap-datatable datatable">
+                                    <thead>
+                                        <tr>
+                                             <th>Id</th>
+                                           <th>Tipo Cliente</th>
+                                           
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody id="listatcliente">
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+
                         
              </div>
           </div>
@@ -129,6 +143,7 @@
             
 				
 					</div>
+
 			 
    </div>
          

@@ -1,4 +1,20 @@
+<?php 
 
+	// la variable controller guarda el nombre del controlador y action guarda la acción por ejemplo registrar 
+	//si la variable controller y action son pasadas por la url desde layout.php entran en el if
+	if (isset($_GET['controller'])&&isset($_GET['action'])) {
+		$controller=$_GET['controller'];
+		
+		$action=$_GET['action'];
+	} else {
+		header('login.php');
+	}	
+	require_once('rutas.php');
+	
+
+session_start();
+ //require('connect.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,15 +42,16 @@
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<h1><a class="navbar-brand" href="index.php"> HOTEL <span>ALAMO</span><p class="logo_w3l_agile_caption"><CENTER>&#9733;&#9733;&#9733;&#9733;&#9733;</CENTER></p></a></h1>
+					<h1><a class="navbar-brand" href="uprincipal.php"> HOTEL <span>ALAMO</span><p class="logo_w3l_agile_caption"><CENTER>&#9733;&#9733;&#9733;&#9733;&#9733;</CENTER></p></a></h1>
 				</div>
 				
-			     <div class=" navbar-right" id="bs-example-navbar-collapse-1">
+			     <div class="  navbar-right" id="bs-example-navbar-collapse-1">
 					<nav class="menu menu--iris">
 						<ul class="nav navbar-nav menu__list">
-							<li class="menu__item"><a href="index.php" class="menu__link scroll">Inicio</a></li>
-							<li class="menu__item"><a href="vhabitaciones.php" class="menu__link scroll">Habitaciones</a></li>
-							<li class="menu__item"><a href="uprincipal.php?controller=usuario&action=login" class="menu__link scroll">Login</a></li>
+							<li class="menu__item"><a href="uprincipal.php" class="menu__link scroll">Inicio</a></li>
+							<li class="menu__item"><a href="habitaciones.php" class="menu__link scroll">Habitaciones</a></li>
+							<li class="menu__item"><a href="creserva.php" class="menu__link scroll">Reservar</a></li>
+							<li class="menu__item"><a href="logout.php" class="menu__link scroll">cerrar sesion</a></li>
 						</ul>
 					</nav>
 				</div>

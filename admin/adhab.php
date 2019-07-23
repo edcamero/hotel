@@ -117,6 +117,22 @@
                         
                     </div>
                 </div>
+                <div class="box-content">
+                                <table class="table table-striped table-bordered bootstrap-datatable datatable">
+                                    <thead>
+                                        <tr>
+                                             <th>Id</th>
+                                            <th>Nombre</th>
+                                            <th>Tipo</th>
+                                            <th>Precio</th>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody id="listahabitacion">
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
                 
                   
             

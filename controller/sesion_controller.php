@@ -42,6 +42,7 @@ class SesionController
                             $_SESSION['start'] = time();
                             $_SESSION['expire'] = $_SESSION['start'] + (60 * 60);
                             $userdb = $result->fetch_assoc();
+                            $_SESSION['rol']=$userdb["rol"];
                             $_SESSION['id']=$userdb['id'];
                              
                             header('Location:'.URL_PATH.'uprincipal.php');

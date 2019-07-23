@@ -1,4 +1,7 @@
-﻿ <!DOCTYPE html>
+﻿ <?php 
+ require_once("../rutas.php");
+ ?>
+ <!DOCTYPE html>
 <html >
 <head>
      <meta charset="UTF-8">
@@ -7,7 +10,7 @@
     initial-scale=1.0, 
     maximum-scale=1.0,
      minimum-scale=1.0">
-    <title> HOTEL AlAMO</title>
+    <title> HOTEL ALAMO</title>
       <link href="css/bootstrap.css" rel="stylesheet" />
    
       <link href="css/font-awesome.css" rel="stylesheet" />
@@ -23,7 +26,7 @@
 
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
                     <span class="sr-only">Navegación de palanca
-</span>
+                    </span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -35,7 +38,7 @@
                     <nav class="menu menu--iris">
                         <ul class="nav navbar-nav menu__list">
                             <li class="menu__item"><a href="admin.php" class="menu__link scroll">Inicio</a></li>
-                           <li class="menu__item"><a href="" class="menu__link scroll">Cerrar Sesion</a></li>
+                           <li class="menu__item"><a href=<?php echo URL_PATH."uprincipal.php?controller=sesion&action=logout"?> class="menu__link scroll">Cerrar Sesion</a></li>
                         </ul>
                     </nav>
                 </div>

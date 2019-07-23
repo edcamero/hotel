@@ -16,8 +16,12 @@
 		session_start();
 		if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] ) {
 			
+			if(isset($_SESSION['rol'])==1){
+				header("location:admin");
+			}else{
+				require_once(VIEW.'cliente/index.php');
+			}
 			
-			require_once(VIEW.'cliente/index.php');
 		}else{
 			header("location:uprincipal.php?controller=sesion&action=login");
 		}

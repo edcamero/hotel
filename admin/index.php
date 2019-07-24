@@ -1,6 +1,6 @@
-﻿ <?php 
- require_once("../rutas.php");
- ?>
+﻿<?php
+require_once("../rutas.php");
+?>
  <!DOCTYPE html>
 <html >
 <head>

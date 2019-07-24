@@ -11,6 +11,7 @@ define('DB',ROOT_PATH.'bd/');
 define('FUNCIONES',ROOT_PATH.'funciones/');
 
 
+
 if(isset($controller)){
     function call($controller, $action){
         //importa el controlador desde la carpeta Controllers

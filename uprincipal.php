@@ -1,4 +1,4 @@
-<?php 
+<?php >
 
 
 	// la variable controller guarda el nombre del controlador y action guarda la acción por ejemplo registrar 
@@ -16,11 +16,18 @@
 		session_start();
 		if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] ) {
 			
-			if(isset($_SESSION['rol'])==1){
-				header("location:admin");
-			}else{
+			if($_SESSION['rol']==3){
 				require_once(VIEW.'cliente/index.php');
 			}
+			
+			if($_SESSION['rol']==1){
+				
+				header("location:admin/index.php?controller=sesion&action=login");
+				//require_once(ADMIN.'index.php');
+			}
+				
+				
+			
 			
 		}else{
 			header("location:uprincipal.php?controller=sesion&action=login");

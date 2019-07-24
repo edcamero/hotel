@@ -11,7 +11,7 @@ class SesionController
         
       
         //require 'funciones/conexion.php';
-            include 'funciones/funciones.php';
+            include FUNCIONES.'funciones.php';
                 if(!empty($_POST))
                     {
                         

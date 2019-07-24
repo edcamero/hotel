@@ -17,6 +17,10 @@ body {
     background:grey;
 	
 }
+#fon{
+    background:grey;
+
+}
 
 #page-wrapper {
     padding: 15px 15px;
@@ -34,7 +38,7 @@ body {
 }
 .panel {
   margin-bottom: 20px;
-  background: #C8C3BC;
+  background: grey;
   border: 2px solid inherit;
   border-radius: 4px;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);

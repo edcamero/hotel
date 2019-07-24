@@ -10,6 +10,11 @@ html, body{
 	font-family: 'Lato', sans-serif;
 	background: #fff;
 }
+.panel-h {
+  color: grey;
+  background-color: red;
+  border-color: grey;
+}
 body a {
 	text-decoration:none;
 	transition:0.5s all;

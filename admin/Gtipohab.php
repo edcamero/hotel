@@ -1,153 +1,49 @@
- 
-<!DOCTYPE html>
-<html lang="es">
-
+  <?php 
+ require_once("../rutas.php");
+ ?>
+ <!DOCTYPE html>
+<html >
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="
-    width=device-width, user-scalable=no, 
-    initial-scale=1.0, 
-    maximum-scale=1.0,
-     minimum-scale=1.0">
-   
-
-    <title>Administrator</title>
-   
-    <link href="css/bootstrap.css" rel="stylesheet" />
+     <meta charset="UTF-8">
+    <meta name="viewport" content=" width=device-width, user-scalable=no,  initial-scale=1.0,  maximum-scale=1.0,  minimum-scale=1.0">
+    <title> HOTEL ALAMO</title>
+      <link href="css/bootstrap.css" rel="stylesheet" />
    
       <link href="css/font-awesome.css" rel="stylesheet" />
-     <link href="css/style.css" rel="stylesheet" />
+     <link href="css/styl.css" rel="stylesheet" />
   
     <link href="css/admin-styles.css" rel="stylesheet" />
-
+   
 </head>
-
 <body>
     <div id="wrapper">
-        <nav class="navbar navbar-default top-navbar" role="navigation">
-            <div class="navbar-header">
-
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                    <span class="sr-only">Navegación de palanca
-</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <h1><a class="navbar-brand" href="index.php"> ADMIN<p class="logo_w3l_agile_caption"></p></a></h1>
-           
-           </div>
-           <div class=" navbar-right" id="bs-example-navbar-collapse-1">
-                    <nav class="menu menu--iris">
-                        <ul class="nav navbar-nav menu__list">
-                                <li class="menu__item"><a href="index.php" class="menu__link scroll">Inicio</a></li>
-                            <li class="menu__item"><a href="" class="menu__link scroll">Cerrar Sesion</a></li>
-                          
-                        </ul>
-                    </nav>
-                </div>
-        </nav>
-        <!--/Navegador  -->
-        <nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
-
-         <li>
-             <a  href="Ghab.php"><i class="fa fa-qrcode"></i> Gestionar Habitaciones</a>
-
-         </li>
-           <li>
-             <a  href="Gdes.php"><i class="fa fa-qrcode"></i> Gestionar Descuento</a>
-         </li>
-         <li>
-             <a  href="Ggan.php"><i class="fa fa-qrcode"></i> Calcular Ganancias</a>
-         </li>
-         <li>
-             <a  href="Gtipohab.php"><i class="fa fa-qrcode"></i> Agregar Tipo de Habitaciones</a>
-         </li>
-          <li>
-             <a  href="Gtipocli.php"><i class="fa fa-qrcode"></i> Agregar Nuevo cliente</a>
-         </li>
-              
-                   
-
-
-                    
-                 </ul>
-
-            </div>
-
-        </nav>
-       
+        <!--/Navegador  horizontal-->
+        <?php require_once("menu.php");?>
         
+        <!--/Navegador vertical -->
+       <?php require_once("menu-vertical.php");?>
+    </div>
+       
+   <!--/contenido-->     
        
         <div id="page-wrapper" >
-          
-			 <div class="col-md-5 col-sm-5  ">
-                    <div class="panel panel-primary">
-                  <div class="panel-heading">AGREGAR TIPO HABITACION</div>
-                    <div class="panel-body">
-						 <form name="form" method="post">
-                            <div class="form-group">
-                             <label> Tipo Habitacion</label>
-                                            
-                                    <input type="id_tipo" class="form-control" name="id_tipo" placeholder="Tipo Habitacion" required>
-                              
-                            </div>
-							  
-							 <input type="submit" name="add" value="Agregar" class="btn btn-primary"> 
-						</form>
-							
-                   
-                        
-                    </div>
 
-               
-                
-                  
-          
-                    
-                       
-                            
-							  
-							 
-							 
-							  
-							  
-							   
-                 </div>
-                 <div class="box-content">
-                                <table class="table table-striped table-bordered bootstrap-datatable datatable">
-                                    <thead>
-                                        <tr>
-                                             <th>Id</th>
-                                           <th>Tipo Habitacion</th>
-                                           
-                                           
-                                        </tr>
-                                    </thead>
-                                    <tbody id="listathabitacion">
-                                        
-                                    </tbody>
-                                </table>
-                            </div>
+    <div class="container col-xs-3 col-sd-3 col-md-3 col-lg-3">
+    <section class="row">
+      <article >
+         <?php require_once("listartipohab.php");?>
 
-                        
-             </div>
-          </div>
-                
-        
-            </div>
-                    
-            
-				
-					</div>
+      </article>
 
-			 
-   </div>
-         
+    </section>
+
+  </div>
 </div>
 
-   
-</body>
+
+            </div>
+              <!--/ fin contenido-->     
+       
+         
+        </body>
 </html>

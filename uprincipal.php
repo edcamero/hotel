@@ -1,4 +1,4 @@
-<?php >
+<?php
 
 
 	// la variable controller guarda el nombre del controlador y action guarda la acción por ejemplo registrar 

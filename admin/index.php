@@ -1,5 +1,24 @@
 ﻿<?php
 require_once("../rutas.php");
+session_start();
+		if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] ) {
+			
+			if($_SESSION['rol']==3){
+				header("location:".URL_PATH."uprincipal.php");
+			}
+			
+			if($_SESSION['rol']==1){
+				
+				header("location:admin/index.php?controller=sesion&action=login");
+				//require_once(ADMIN.'index.php');
+			}
+				
+				
+			
+			
+		}else{
+			header("location:uprincipal.php?controller=sesion&action=login");
+		}
 ?>
  <!DOCTYPE html>
 <html >

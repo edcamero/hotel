@@ -25,50 +25,48 @@
     </div>
        
    <!--/contenido-->     
-       
         <div id="page-wrapper" >
-          
-			 <div class="col-md-5 col-sm-5  ">
-                    <div class="panel panel-primary">
-                  <div class="panel-heading">AGREGAR TIPO HABITACION</div>
-                    <div class="panel-heading ">
-						 <form name="form" method="post">
+ 
+   <!--/contenido-->     
+   <div  class="col-md-5 col-sm-5  ">
+      <div class="panel panel-primary">
+          <div class="panel-heading">AGREGAR TIPO HABITACION</div>
+          <div class="  panel-heading"> 
+           <form name="form" method="post">
                             <div class="form-group">
                              <label> Tipo Habitacion</label>
                                             
                                     <input type="id_tipo" class="form-control" name="id_tipo" placeholder="Tipo Habitacion" required>
                               
                             </div>
-							  
-							 <input type="submit" name="add" value="Agregar" class="btn btn-primary"> 
-						</form>
+                
+               <input type="submit" name="add" value="Agregar" class="btn btn-primary"> 
+            </form>
 
-							
-                   </div>
-                        
-                    </div>
+        </div>
+        
+      </div>
 
-          
-
-                </div>
-
-                <!--/mostrar tabla-->   
+     </div>
+      <!--/mostrar tabla-->   
                 <div id="fon">
 
                      <div class=" col-md-5 col-sm-5 ">    
                 <div class="panel panel-primary">
-                 <div class="  panel-heading"> TIPO HABITACION</div>
+                 <div class="  panel-heading"> Tipo Habitacion</div>
 
                 <?php require_once("listartipohab.php");
                 ?>
                 </div>
                </div>
                </div>  
-                 <!--/fin tabla-->     
+                 <!--/fin tabla-->
+   </div>
+          
+      
 
-            </div>
-              <!--/ fin contenido-->     
-       
+            
+              <!--/ fin contenido--> 
          
         </body>
 </html>

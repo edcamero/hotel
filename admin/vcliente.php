@@ -10,7 +10,7 @@
       <link href="css/bootstrap.css" rel="stylesheet" />
    
       <link href="css/font-awesome.css" rel="stylesheet" />
-     <link href="css/styl.css" rel="stylesheet" />
+     <link href="css/style.css" rel="stylesheet" />
   
     <link href="css/admin-styles.css" rel="stylesheet" />
    
@@ -27,19 +27,20 @@
    <!--/contenido-->     
        
         <div id="page-wrapper" >
+          
+	<!--/mostrar tabla-->   
+                <div id="fon">
 
-    <div class="container col-xs-3 col-sd-3 col-md-3 col-lg-3">
-    <section class="row">
-      <article >
-         <?php require_once("listartipohab.php");?>
+                     <div class=" col-md-7 col-sm-7 ">    
+                <div class="panel panel-primary">
+                 <div class="  panel-heading"> Cliente</div>
 
-      </article>
-
-    </section>
-
-  </div>
-</div>
-
+                <?php require_once("listacliente.php");
+                ?>
+                </div>
+               </div>
+               </div>  
+                 <!--/fin tabla-->     
 
             </div>
               <!--/ fin contenido-->     

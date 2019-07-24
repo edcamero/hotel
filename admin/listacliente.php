@@ -16,14 +16,16 @@
 <div class="table table-responsive">
 	<table class=" table table-hover table-bordered table-striped table-condensed" >
 			<td>Id</td>
-			<td>Usuario</td>
-		
-			<td>Rol</td>
+			<td>Nombre</td>
+		    <td>Apellido</td>
+		    <td>Direccion</td>
+		    <td>Correo</td>
+			
 			
 		</tr>
 
 		<?php 
-		$sql="SELECT * from usuario";
+		$sql="SELECT * from persona";
 		$result=mysqli_query($conexion,$sql);
 
 		while($mostrar=mysqli_fetch_array($result)){
@@ -31,9 +33,10 @@
 
 		<tr>
 			<td><?php echo $mostrar['id'] ?></td>
-			<td><?php echo $mostrar['nombre_user'] ?></td>
-			
-			<td><?php echo $mostrar['rol'] ?></td>
+			<td><?php echo $mostrar['nombres'] ?></td>
+			<td><?php echo $mostrar['apellidos'] ?></td>
+			<td><?php echo $mostrar['direccion'] ?></td>
+			<td><?php echo $mostrar['correo'] ?></td>
 			
 		</tr>
 	<?php 

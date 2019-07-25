@@ -30,14 +30,24 @@
     }
 
     public static function agregar($usuario){
-		echo "esta registrando";
 		$db=Conectar::conexion();
-		$insert=$db->prepare('INSERT INTO USUARIO VALUES(:id,:nombre_user,:password, :rol)');
-		$insert->bindValue('id',$usuario->id);
-        $insert->bindValue('nombre_user',$usuario->nombre);
-        $insert->bindValue('password',$usuario->password);
-        $insert->bindValue('rol',$usuario->rol);
-        $insert->execute();
+		try { 
+		
+		$insert=$db->prepare('INSERT INTO usuario VALUES(:id,:nombre_user,:password,:rol)');
+		$insert->bindValue(':id',$usuario->id);
+		
+        $insert->bindValue(':nombre_user',$usuario->nombre);
+        $insert->bindValue(':password',$usuario->password);
+        $insert->bindValue(':rol',$usuario->rol);
+		$insert->execute();
+		
+	} catch (Exception $e) {
+        
+        echo "Fallo: " . $e->getMessage();
+      }
+        
+    
+		
     }
 
     public static function actulizar($usuario){

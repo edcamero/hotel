@@ -7,7 +7,7 @@ class ClienteController{
     public function registrarIndividual(){
         if(!empty($_POST))
 {
-		$mysqli=Conectar::conexionMySql(); 
+		//$mysqli=Conectar::conexionMySql(); 
 		$tipo_docu_id = $_POST['tipo_docu_id'];
 		$id = $_POST['id'];
 		$nombre = $_POST['nombre'];
@@ -64,16 +64,19 @@ class ClienteController{
         if(count($this->errors) <2){
 
 
-       
+       echo "sin errores";
         
         $password= md5($password);
-        $rol=3;
+        $rol=1;
 		$tipo_cliente=1;
 		//($cedula, $nombres, $apellidos, $direccion,$correo,$tipo_docu_id,$tipo_cliente,$id_usuario,$nombre_user,$password,$rol);
 		$cliente_nuevo=new Cliente($id,$nombre,$apellido,$direccion,$correo,$tipo_docu_id,$tipo_cliente,$id,$usuario,$password,$rol);
-		echo $cliente_nuevo->id;
+		//echo $cliente_nuevo->usuario->password;
+		echo $rol;
 		Cliente::agregar($cliente_nuevo);
+		//echo $cliente_nuevo->id;
 		$mensaje='Cliente Agregado con exito';
+		
 		
 
     		}

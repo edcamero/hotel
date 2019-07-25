@@ -9,6 +9,8 @@ class TipohabitacionController
     
         public function index()
         {   
+
+            
             $GLOBALS['cuerpo']=ADMIN."Ghab.php";
            // echo "hola controlador";
 

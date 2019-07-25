@@ -11,7 +11,7 @@
 		
 		$action=$_GET['action'];
 
-		echo "hola";
+		
 	} else 
 	{
 		

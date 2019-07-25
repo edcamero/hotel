@@ -22,9 +22,7 @@ function __construct($nombre_tipo,$precio){
 
 }
 
-function ver(){
 
-}
 
 
 

@@ -10,7 +10,7 @@
      minimum-scale=1.0">
     <title> HOTEL ALAMO</title>
       <link href="css/bootstrap.css" rel="stylesheet" />
-   
+      <link href="css/font-awesome.css" rel="stylesheet" />
       <link href="css/font-awesome.css" rel="stylesheet" />
      <link href="css/styl.css" rel="stylesheet" />
   

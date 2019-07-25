@@ -8,11 +8,11 @@ class Persona{
     public $tipo_docu_id;
 
 
-    function __construct($cedula, $nombres, $apellcedulaos, $direccion,$correo,$tipo_docu_id)
+    function __construct($cedula, $nombres, $apellidos, $direccion,$correo,$tipo_docu_id)
 	{
         $this->cedula=$cedula;
         $this->nombres=$nombres;
-        $this->apellcedulaos=$apellcedulaos;
+        $this->apellidos=$apellidos;
         $this->direccion=$direccion;
         $this->correo=$correo;
         $this->tipo_docu_id=$tipo_docu_id;
@@ -24,7 +24,7 @@ class Persona{
 	{
         $this->cedula=$persona->cedula;
         $this->nombres=$persona->nombres;
-        $this->apellcedulaos=$persona->apellcedulaos;
+        $this->apellidos=$persona->apellidos;
         $this->direccion=$persona->direccion;
         $this->correo=$persona->correo;
         $this->tipo_docu_cedula=$persona->tipo_docu_cedula;
@@ -52,10 +52,10 @@ class Persona{
         $db=Conectar::conexion();
         
         try {  
-        $insert=$db->prepare('INSERT INTO persona VALUES(:id,:nombres,:apellcedulaos,:direccion,:correo,:tipo_docu_id)');
+        $insert=$db->prepare('INSERT INTO persona VALUES(:id,:nombres,:apellidos,:direccion,:correo,:tipo_docu_id)');
         $insert->bindValue('id',$persona->cedula);
         $insert->bindValue('nombres',$persona->nombres);
-        $insert->bindValue('apellcedulaos',$persona->apellcedulaos);
+        $insert->bindValue('apellidos',$persona->apellidos);
         $insert->bindValue('direccion',$persona->direccion);
         $insert->bindValue('correo',$persona->correo);
         $insert->bindValue('tipo_docu_id',$persona->tipo_docu_id);

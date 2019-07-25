@@ -40,7 +40,7 @@ if(isset($controller)){
                         );
     //verifica que el controlador enviado desde index.php esté dentro del arreglo controllers
     if (array_key_exists($controller, $controllers)) {
-        //echo "exite controlador";
+        
         //verifica que el arreglo controllers con la clave que es la variable controller del index exista la acción
         if (in_array($action, $controllers[$controller])) {
             //llama  la función call y le pasa el controlador a llamar y la acción (método) que está dentro del controlador

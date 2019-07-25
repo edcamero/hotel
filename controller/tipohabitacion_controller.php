@@ -24,7 +24,7 @@ class TipohabitacionController
 
 
         public function ver(){
-           // GLOBALS['cuerpo']=ADMIN."Ghab.php";
+            $this::index();
 
         }
  }

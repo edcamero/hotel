@@ -9,7 +9,7 @@ session_start();
 			
 			if($_SESSION['rol']==1){
 				
-				header("location:admin/index.php?controller=sesion&action=login");
+				//header("location:admin/index.php?controller=sesion&action=login");
 				//require_once(ADMIN.'index.php');
 			}
 				

@@ -1,49 +1,62 @@
-<?php 
 
-	$conexion=mysqli_connect('localhost','root','','nnn');
-
- ?>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-	<title>LISTAR HABITACION</title>
-	 <link href="css/bootstrap.css" rel="stylesheet" />
-</head>
-<body>
 
 <br>
 
-	<div class="table table-responsive">
+	<div class="table ">
 	<table class=" table table-hover table-bordered table-striped table-condensed" >
-		    <tr>
+		   
+	<thead> <tr class="text-center">
 		
-			<td>Id</td>
-			<td>Tipo Habitacion</td>
+			<td scope="col">Id</td>
+			<td scope="col">Tipo Habitacion</td>
+			<td scope="col">Precio</td>
+			<td scope="col">Acciones</td>
 			
-			
-		</tr>
+			</tr>
+	</thead>
 
 		<?php 
-		$sql="SELECT * from tipo_habitacion";
-		$result=mysqli_query($conexion,$sql);
+		$lista=Tipo_habitacion::listar();
 
-		while($mostrar=mysqli_fetch_array($result)){
-		 ?>
 
-		<tr>
-			<td><?php echo $mostrar['id'] ?></td>
-			<td><?php echo $mostrar['nombre_tipo'] ?></td>
+		foreach ($lista as &$tipo) {
+			echo $tipo->id;
+			echo "<tr>";
 			
 			
-		</tr>
-	<?php 
-	}
-	 ?>
-	</table>>
-	</div>
+			echo "<td id=$tipo->id>$tipo->id</td>";
+			echo "<td>$tipo->nombre_tipo </td>";
+			echo "<td>$tipo->precio </td>";
+			?>
+			
+			<td class="text-center">
+			<div class='btn-group'>
+			
+			
+			<button id="id" name="see-language"type="button" class="btn btn-primary">
+			<a href=<?php echo URL_PATH."admin/index.php?controller=tipohabitacion&action=ver&id=".$tipo->id;?>>	
+						Ver
+						</a>
+			</button>
+			<button id="see-language" name="see-language"type="button" class="btn btn-success"
+						>
+						editar
+			</button>
+			
+			<button id="see-language" name="see-language"type="button" class="btn btn-danger"
+						data-toggle="modal" 
+						data-target="#myModal">
+						eliminar
+			</button>
+			<?php		echo "</div></td>";
+			echo "</tr>";
+			
+		}
+		
+		?>
+		
 	
 
-</body>
-</html>
+	</table>
+	</div>
+	

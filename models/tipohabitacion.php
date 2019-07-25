@@ -6,13 +6,27 @@ public $nombre_tipo;
 public $precio;
 public $imagenes;
 
-function __construct($id,$nombre_tipo,$precio){
-    $this->id=$id;
+
+
+function __construct($nombre_tipo,$precio){
+    
+    
+      
+        
+    
     $this->nombre_tipo=$nombre_tipo;
     $this->precio=$precio;
-    $this->imagenes=Imagen::buscarId($id);
+    $this->imagenes=Imagen::buscarId($this->id);
+    
+    
 
 }
+
+function ver(){
+
+}
+
+
 
 
 function agregarImagen(Imagen $img){
@@ -20,14 +34,19 @@ function agregarImagen(Imagen $img){
   
 }
 
-function static listar(){
+public static function listar(){
     $listaTipoHab =[];
+    
+
     $db=Conectar::conexion();
     $sql=$db->query('SELECT * FROM tipo_habitacion');
 
     // carga en la $listaPersonas cada registro desde la base de datos
     foreach ($sql->fetchAll() as $tipo_habi) {
-        $listaTipoHab[]= new Tipo_cliente($tipo_habi['id'],$tipo_habi['nombre'], $tipo_habi['descuento']);
+        
+        $th= new Tipo_habitacion($tipo_habi['nombre_tipo'], $tipo_habi['precio']);
+        $th->id=$tipo_habi['id'];
+        $listaTipoHab[]=$th;
     }
     return $listaTipoHab;
 }
@@ -35,27 +54,30 @@ function static listar(){
 
 
 public static function agregar($tipo_habi){
-
+    
 
     $db=Conectar::conexion();
     
     try {  
     
-    $insert=$db->prepare('INSERT INTO tipo_habitacion VALUES(:id,:nombre_tipo,:precio)');
-    $insert->bindValue('id',$tipo_habi->id);
+    $insert=$db->prepare('INSERT INTO tipo_habitacion VALUES(null,:nombre_tipo,:precio)');
+    //$insert->bindValue('id',$tipo_habi->id);
+    
     $insert->bindValue('nombre_tipo',$tipo_habi->nombre_tipo);
     $insert->bindValue('precio',$tipo_habi->precio);
     
     $insert->execute();
 
-    foreach ($this->imagenes as $foto) {
+if(empty($tipo_habi->imagenes)){
+    foreach ($tipo_habi->imagenes as $foto) {
         Imagen::agregar($foto);
     }
+}
 } catch (Exception $e) {
     
     echo "Fallo: " . $e->getMessage();
   }
-   
+
 }
 
 

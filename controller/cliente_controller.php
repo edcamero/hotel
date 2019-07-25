@@ -67,7 +67,7 @@ class ClienteController{
        echo "sin errores";
         
         $password= md5($password);
-        $rol=1;
+        $rol=3;
 		$tipo_cliente=1;
 		//($cedula, $nombres, $apellidos, $direccion,$correo,$tipo_docu_id,$tipo_cliente,$id_usuario,$nombre_user,$password,$rol);
 		$cliente_nuevo=new Cliente($id,$nombre,$apellido,$direccion,$correo,$tipo_docu_id,$tipo_cliente,$id,$usuario,$password,$rol);
@@ -77,7 +77,7 @@ class ClienteController{
 		//echo $cliente_nuevo->id;
 		$mensaje='Cliente Agregado con exito';
 		
-		
+		header("location:".URL_PATH."uprincipal.php");
 
     		}
 		}

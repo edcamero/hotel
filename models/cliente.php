@@ -52,16 +52,7 @@ class Cliente extends persona{
         Usuario::agregar($cliente->usuario);
         $db=Conectar::conexion();
         try {  
-            echo "estoy llegando";
-		echo "<br>";
-		echo $cliente->id;
-		echo "<br>";
-		echo $cliente->cedula;
-		echo "<br>";
-		echo $cliente->tipo_cliente->id;
-		echo "<br>";
-		echo $cliente->usuario->id;
-		echo "<br>";
+        
         $insert=$db->prepare('INSERT INTO cliente VALUES(:id,:persona_id,:tipo_cliente_id ,:usuario_id)');
         $insert->bindValue('id',$cliente->id);
         $insert->bindValue('persona_id',$cliente->cedula);

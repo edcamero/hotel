@@ -8,7 +8,8 @@ session_start();
 			}
 			
 			if($_SESSION['rol']==1){
-				
+                
+                requie
 				//header("location:admin/index.php?controller=sesion&action=login");
 				//require_once(ADMIN.'index.php');
 			}
@@ -18,7 +19,8 @@ session_start();
 			
 		}else{
 			header("location:uprincipal.php?controller=sesion&action=login");
-		}
+        }
+        
 ?>
  <!DOCTYPE html>
 <html >

@@ -62,29 +62,31 @@ if(isset($action)){
     <div id="page-wrapper"  class="container ">
                 <div id="page-inner " class="container row justify-content-center">
                 
+                <?php 
+               $tipoH=Tipo_habitacion::buscarId($_GET['id']);?>
                     <div class="row justify-content-center">
                     
                         <div class="col col-md-8 col-sm-8 row justify-content-center">
                             <div class="panel panel-primary">
                                 <div class="panel-heading">
-                                Modificar Precio Tipo Habitacion
+                                Informacion de  Tipo Habitacion  <?php echo $tipoH->nombre_tipo;?>
 
                             </div>
                                 
                             <div class="panel-body">
                                 <form name="form" method="post" action="<?php echo URL_PATH."admin/index.php?controller=tipohabitacion&action=agregar";?>">
                                 <div class="form-group">
-                                            <label>Nombre</label>
-                                            <input type="precio_hab" class="form-control" name="nombre_hab" placeholder="Nombre habitacion" required>
-
+                                            <label>ID:</label>
+                                            <label><?php echo $tipoH->id;?></label>
                                     </div>
                     
-                                    <div class="form-group">
-                                            <label>Nuevo Precio</label>
-                                            <input type="precio_hab" class="form-control" name="precio_hab" placeholder="precio habitación" required>
+                                    <div class="form-group ">
+                                            <label for="">Precio:</label>
+                                            <label><?php echo $tipoH->precio;?></label>
+                                            
 
                                     </div>
-                                    <input type="submit" name="add" value="Agregar" class="btn btn-primary"> 
+                                    <input type="submit" name="add" value="Agregar Imagen" class="btn btn-primary"> 
                                 </form>
                 
                             </div>

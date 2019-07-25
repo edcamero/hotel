@@ -26,8 +26,13 @@ class TipohabitacionController
 
 
         public function ver(){
-            $tipoH=Tipo_habitacion::buscarId($_GET['id']);
+            $GLOBALS['tipoHab']=Tipo_habitacion::buscarId($_GET['id']);
             $this::index();
 
+        }
+
+
+        public function buscarTipo($id){
+            return Tipo_habitacion::buscarId($id);
         }
  }

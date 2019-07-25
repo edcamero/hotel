@@ -115,7 +115,8 @@ public static function buscarId($id){
     $select->execute();
     //asignarlo al objeto usuario
     $tipoHabi=$select->fetch();
-    $tipo_cli= new Tipo_habitacion($tipoHabi['id'],$tipoHabi['nombre_tipo'],$tipoHabi['precio']);
+    $tipo_cli= new Tipo_habitacion($tipoHabi['nombre_tipo'],$tipoHabi['precio']);
+    $tipo_cli->id=$tipoHabi['id'];
     return $tipo_cli;
 }
 

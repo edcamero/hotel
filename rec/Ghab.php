@@ -17,7 +17,7 @@ if(isset($action)){
                             </div>
                                 
                             <div class="panel-body">
-                                <form name="form" method="post" action="<?php echo URL_PATH."admin/index.php?controller=tipohabitacion&action=agregar";?>">
+                                <form name="form" method="post" action="<?php echo URL_PATH."rec/index.php?controller=tipohabitacion&action=agregar";?>">
                                 <div class="form-group">
                                             <label>Nombre</label>
                                             <input type="precio_hab" class="form-control" name="nombre_hab" placeholder="Nombre habitacion" required>

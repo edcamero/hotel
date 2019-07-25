@@ -9,7 +9,7 @@
             </a>
             <div class="dropdown-menu collapse  " aria-labelledby="navbarDropdown">
                 <ul class="nav flex-column ml-3">
-                        <li class="dropdown-item"><a  href="ghab.php">Gestion Tipo Habitacion</a></li>
+                        <li class="dropdown-item"><a  href="Ghab.php">Gestion Tipo Habitacion</a></li>
                         <li class="dropdown-item"> <a  href="#">Ver tipo habitacion</a></li>
                         <li class="dropdown-item"><a  href="#">Listar Habitaciones </a></li>
             

@@ -10,15 +10,15 @@
         <td scope="col">Id</td>
         <td scope="col">NOMBRE</td>
         <td scope="col">DESCRIPCION</td>
-        <td scope="col">RUTA</td>
+        <td scope="col">imagen</td>
         
         </tr>
 </thead>
 
     <?php 
-    $lista=Imagen::buscarId($_GET['id']);
+    $lista=Tipo_habitacion::buscarId($_GET['id']);
 
-
+    if (!empty($var)) {
     foreach ($lista as &$tipo) {
         echo $tipo->id;
         echo "<tr>";
@@ -52,7 +52,7 @@
         echo "</tr>";
         
     }
-    
+}
     ?>
     
 

@@ -26,6 +26,7 @@ class TipohabitacionController
 
 
         public function ver(){
+            $tipoH=Tipo_habitacion::buscarId($_GET['id']);
             $this::index();
 
         }

@@ -21,4 +21,10 @@ class TipohabitacionController
             Tipo_habitacion::agregar($tipo);
 
         }
+
+
+        public function ver(){
+           // GLOBALS['cuerpo']=ADMIN."Ghab.php";
+
+        }
  }

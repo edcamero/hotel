@@ -11,7 +11,7 @@
 		
 		$action=$_GET['action'];
 
-		
+		echo "hola";
 	} else 
 	{
 		
@@ -32,6 +32,7 @@
 			
 			
 		}else{
+			
 			header("location:uprincipal.php?controller=sesion&action=login");
 		}
 

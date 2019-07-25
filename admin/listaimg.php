@@ -8,9 +8,9 @@
 <thead> <tr class="text-center">
     
         <td scope="col">Id</td>
-        <td scope="col">Tipo Habitacion</td>
-        <td scope="col">Precio</td>
-        <td scope="col">Acciones</td>
+        <td scope="col">NOMBRE</td>
+        <td scope="col">DESCRIPCION</td>
+        <td scope="col">RUTA</td>
         
         </tr>
 </thead>

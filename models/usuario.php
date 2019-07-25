@@ -30,7 +30,7 @@
     }
 
     public static function agregar($usuario){
-		
+		echo "esta registrando";
 		$db=Conectar::conexion();
 		$insert=$db->prepare('INSERT INTO USUARIO VALUES(:id,:nombre_user,:password, :rol)');
 		$insert->bindValue('id',$usuario->id);

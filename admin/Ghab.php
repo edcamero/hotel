@@ -1,4 +1,5 @@
 <?php
+
 if(isset($action)){
     if($action=='index'){
 
@@ -52,10 +53,11 @@ if(isset($action)){
                 </div>
     </div>
 
+<?php
+     }
 
-    <?php> }
-    elseif($action==ver) {
-        echo "hola"
+    if($action=="ver") {
+        
         ?>
     <div id="page-wrapper"  class="container ">
                 <div id="page-inner " class="container row justify-content-center">
@@ -93,7 +95,7 @@ if(isset($action)){
                                     <div class="panel panel-primary">
                                             <div class="  panel-heading"> Imagenes</div>
 
-                                    <?php require_once("listarimg.php");
+                                    <?php require_once(ADMIN."listaimg.php");
                                     ?>
                                     </div>
                                     </div>

@@ -71,9 +71,10 @@ class ClienteController{
 		$tipo_cliente=1;
 		//($cedula, $nombres, $apellidos, $direccion,$correo,$tipo_docu_id,$tipo_cliente,$id_usuario,$nombre_user,$password,$rol);
 		$cliente_nuevo=new Cliente($id,$nombre,$apellido,$direccion,$correo,$tipo_docu_id,$tipo_cliente,$id,$usuario,$password,$rol);
-		
+		echo $cliente_nuevo->id;
 		Cliente::agregar($cliente_nuevo);
 		$mensaje='Cliente Agregado con exito';
+		
 
     		}
 		}

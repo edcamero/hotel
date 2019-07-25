@@ -12,10 +12,10 @@ class Cliente extends persona{
         parent::__construct($cedula, $nombres, $apellidos, $direccion,$correo,$tipo_docu_id);
         $this->tipo_cliente=Tipo_cliente::buscarId($tipo_cliente_id);
         $this->usuario=new Usuario($id_usuario,$nombre_user,$password,$rol);
-        //$this->usuario=Usuario::buscarId($id_usuario);
+        echo "registro";
     }
    
-    function __construct3($id,$cedula,$tipo_cliente_id,$id_usuario){
+    function __construct2($id,$cedula,$tipo_cliente_id,$id_usuario){
         $this->id=$id;
         parent::__construct(Persona::buscarId($cedula));
         $this->tipo_cliente=Tipo_cliente::buscarId($tipo_cliente_id);

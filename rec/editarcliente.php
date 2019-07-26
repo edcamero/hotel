@@ -32,7 +32,8 @@ if ($resultado==1) {
 	echo $resultado;
 	echo "Se modifico";
 } else {
-	echo "No se borro";
+	echo "No se borro"
+	;
 
 }
 ?>

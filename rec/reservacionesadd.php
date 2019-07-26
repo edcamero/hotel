@@ -28,6 +28,7 @@ if (mysql_num_rows($resultado)) {
 //consulta para sacar los clientes y ponerlos en el selected
 //mysql_free_result($combo);
  ?>
+ 
  <!doctype html>
  <html lang="es">
  <head>

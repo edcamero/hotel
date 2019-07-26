@@ -24,6 +24,7 @@ if (mysql_num_rows($resultado)) {
 	echo "Error...";
 }
  ?>
+ 
  <!doctype html>
  <html lang="es">
  <head>

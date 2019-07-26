@@ -8,12 +8,14 @@ class Imagen{
     public $ruta;
 
     function __construct($id_tipo_hab,$nombre, $descripcion,$ruta){
-        
+        //$this-id=$id;
         $this->id_tipo_hab=$id_tipo_hab;
         $this->nombre=$nombre;
         $this->descripcion=$descripcion;
         $this->ruta=$ruta;
     }
+
+   
 
 
     public static function listar(){
@@ -90,9 +92,7 @@ $tamano = $archivo['size'];
 
     public static function buscarId($id){
       
-      echo "<br>";
-    echo $id;
-		$listaImagenes =[];
+     	$listaImagenes =[];
 		$db=Conectar::conexion();
 		$select=$db->prepare('SELECT * FROM imagen WHERE id_tipo_hab=:id');
     $select->bindValue('id',$id);
@@ -101,14 +101,45 @@ $tamano = $archivo['size'];
 		// carga en la $listaPersonas cada registro desde la base de datos
 		foreach ($select->fetchAll() as $img) {
       
-			$listaImagenes[]= new Imagen($img['id'],$img['id_tipo_hab'],$img['nombre_imagen'], $img['descripcion'],$img['ruta_img']);
-		}
+			$foto= new Imagen($img['id_tipo_hab'],$img['nombre_imagen'], $img['descripcion'],$img['ruta_img']);
+      $foto->id=$img['id'];
+      //echo 'hola mano'.$foto->ruta;
+      array_push ( $listaImagenes , $foto);
+      //array_push ( $listaImagenes , $foto);
+     //echo $listaImagenes[0]->nombre;
+    }
 		return $listaImagenes;
 		
 		
 		//asignarlo al objeto usuario
 		
-	}
+  }
+  
+
+  public static function muestra($id){
+      
+    
+ $db=Conectar::conexion();
+ $select=$db->prepare('SELECT * FROM imagen WHERE id_tipo_hab=:id limit 1');
+ $select->bindValue('id',$id);
+ 
+ $select->execute();
+ $ruta='';
+ // carga en la $listaPersonas cada registro desde la base de datos
+ foreach ($select->fetchAll() as $img) {
+   
+   $ruta=$img['ruta_img'];
+   //echo 'hola mano'.$foto->ruta;
+   //array_push ( $listaImagenes , $foto);
+   //array_push ( $listaImagenes , $foto);
+  //echo $listaImagenes[0]->nombre;
+ }
+ echo $ruta;
+ 
+ 
+ //asignarlo al objeto usuario
+ 
+}
 
 
 

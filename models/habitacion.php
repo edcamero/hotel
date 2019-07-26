@@ -1,6 +1,6 @@
 <?php
 
-require_once('tipo_habitacion.php');
+require_once(MODELS.'tipohabitacion.php');
 
 class Habitacion{
     public $id;
@@ -13,8 +13,7 @@ class Habitacion{
         $this->tipo_habi=Tipo_habitacion::buscarId($tipo_hab_id);
     }
 
-
-    function static listar(){
+    public static function  listar(){
         $lista=[];
         $db=Conectar::conexion();
         foreach ($sql->fetchAll() as $habi) {
@@ -22,8 +21,9 @@ class Habitacion{
         }
         return $lista;
     }
+ 
 
-    function static agregar(Habitacion $habi){
+    public static function  agregar(Habitacion $habi){
         $db=Conectar::conexion();
 
 

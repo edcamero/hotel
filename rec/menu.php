@@ -12,7 +12,7 @@
         
         <nav class="menu menu--iris">
                 <ul class="nav navbar-nav menu__list">
-                    <li class="col mt-5"><a class="navbar-brand ml-4" href="#">REC</a></li>
+                    <li class="col mt-5"><a class="navbar-brand ml-4" href="sec.php">REC</a></li>
         
                 </ul>
             </nav>
@@ -22,10 +22,11 @@
     <div class=" navbar-right" id="bs-example-navbar-collapse-1">
             <nav class="menu menu--iris">
                 <ul class="nav navbar-nav menu__list">
-                    <li ><a href=""> Inicio</a></li>
-                <li><a href="">Cerrar Sesion</a></li>
+                    <li ><a href="sec.php">Inicio</a></li>
+                <li ><a href="logout.php">Cerrar Sesion</a></li>
                 </ul>
             </nav>
     </div>
 
 </nav>
+

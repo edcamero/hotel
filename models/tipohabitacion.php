@@ -8,12 +8,8 @@ public $imagenes;
 
 
 
-function __construct($nombre_tipo,$precio){
-    
-    
-      
-        
-    
+function __construct($id,$nombre_tipo,$precio){
+    $this->id=$id;
     $this->nombre_tipo=$nombre_tipo;
     $this->precio=$precio;
     $this->imagenes=Imagen::buscarId($this->id);
@@ -42,7 +38,7 @@ public static function listar(){
     // carga en la $listaPersonas cada registro desde la base de datos
     foreach ($sql->fetchAll() as $tipo_habi) {
         
-        $th= new Tipo_habitacion($tipo_habi['nombre_tipo'], $tipo_habi['precio']);
+        $th= new Tipo_habitacion($tipo_habi['id'],$tipo_habi['nombre_tipo'], $tipo_habi['precio']);
         $th->id=$tipo_habi['id'];
         $listaTipoHab[]=$th;
     }
@@ -115,7 +111,7 @@ public static function buscarId($id){
     $select->execute();
     //asignarlo al objeto usuario
     $tipoHabi=$select->fetch();
-    $tipo_cli= new Tipo_habitacion($tipoHabi['nombre_tipo'],$tipoHabi['precio']);
+    $tipo_cli= new Tipo_habitacion($id,$tipoHabi['nombre_tipo'],$tipoHabi['precio']);
     $tipo_cli->id=$tipoHabi['id'];
     return $tipo_cli;
 }

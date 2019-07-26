@@ -7,8 +7,8 @@ class Imagen{
     public $descripcion;
     public $ruta;
 
-    function __construct($id,$id_tipo_hab,$nombre, $descripcion,$ruta){
-        $this->id=$id;
+    function __construct($id_tipo_hab,$nombre, $descripcion,$ruta){
+        
         $this->id_tipo_hab=$id_tipo_hab;
         $this->nombre=$nombre;
         $this->descripcion=$descripcion;
@@ -32,8 +32,8 @@ class Imagen{
         $db=Conectar::conexion();
         
         try {  
-        $insert=$db->prepare('INSERT INTO imagen VALUES(:id,:id_tipo_hab,:nombre_imagen,:descripcion,:ruta_img)');
-        $insert->bindValue('id',$imagen->id);
+        $insert=$db->prepare('INSERT INTO imagen VALUES(null,:id_tipo_hab,:nombre_imagen,:descripcion,:ruta_img)');
+       // $insert->bindValue('id',$imagen->id);
         $insert->bindValue('id_tipo_hab',$imagen->id_tipo_hab);
         $insert->bindValue('nombre_imagen',$imagen->nombre);
         $insert->bindValue('descripcion',$imagen->descripcion);
@@ -48,7 +48,36 @@ class Imagen{
        
     }
 
+function addfile($archivo){
 
+  $nombre_img = $archivo['name'];
+$tipo = $archivo['type'];
+$tamano = $archivo['size'];
+
+          if (($nombre_img == !NULL)&& ($_FILES['imagen']['size'] > 200000))
+          {
+            //indicamos los formatos que permitimos subir a nuestro servidor
+            if (($_FILES["imagen"]["type"] == "image/gif")
+            || ($_FILES["imagen"]["type"] == "image/jpeg")
+            || ($_FILES["imagen"]["type"] == "image/jpg")
+            || ($_FILES["imagen"]["type"] == "image/png"))
+            {
+                // Ruta donde se guardarán las imágenes que subamos
+              
+                // Muevo la imagen desde el directorio temporal a nuestra ruta indicada anteriormente
+                move_uploaded_file($_FILES['imagen']['tmp_name'],IMG.$nombre_img);
+              }else
+              {
+                //si no cumple con el formato
+                echo "No se puede subir una imagen con ese formato ";
+              }
+          }else{
+            //si existe la variable pero se pasa del tamaño permitido
+            if($nombre_img == !NULL) echo "La imagen es demasiado grande ";
+          }
+
+
+          }
 
     public static function eliminar($id,$nombre){
 		$db=Conectar::conexion();
@@ -60,16 +89,19 @@ class Imagen{
 
 
     public static function buscarId($id){
-        //buscar
-        
+      
+      echo "<br>";
+    echo $id;
 		$listaImagenes =[];
 		$db=Conectar::conexion();
-		$select=$db->prepare('SELECT * FROM imagen WHERE ID=:id');
-		$select->bindValue('id',$id);
+		$select=$db->prepare('SELECT * FROM imagen WHERE id_tipo_hab=:id');
+    $select->bindValue('id',$id);
+    
 		$select->execute();
 		// carga en la $listaPersonas cada registro desde la base de datos
 		foreach ($select->fetchAll() as $img) {
-			$listaImagenes[]= new Imagen($img['id'],$img['id_tipo_hab'],$img['nombre_imagen'], $img['descripcion'],$persona['ruta_img']);
+      
+			$listaImagenes[]= new Imagen($img['id'],$img['id_tipo_hab'],$img['nombre_imagen'], $img['descripcion'],$img['ruta_img']);
 		}
 		return $listaImagenes;
 		

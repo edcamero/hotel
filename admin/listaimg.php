@@ -7,7 +7,7 @@
        
 <thead> <tr class="text-center">
     
-        <td scope="col">Id</td>
+        <!--<td scope="col">Id</td>-->
         <td scope="col">NOMBRE</td>
         <td scope="col">DESCRIPCION</td>
         <td scope="col">imagen</td>
@@ -16,26 +16,26 @@
 </thead>
 
     <?php 
-    $lista=Tipo_habitacion::buscarId($_GET['id']);
-
-    if (!empty($var)) {
-    foreach ($lista as &$tipo) {
-        echo $tipo->id;
+    $tipoh=Tipo_habitacion::buscarId($_GET['id']);
+       
+        
+    if (!empty($tipoh->imagenes)) {
+        
+    foreach ($tipoh->imagenes as &$tipo) {
+       // echo $tipo->id;
         echo "<tr>";
         
         
-        echo "<td>$tipo->id</td>";
+       // echo "<td>$tipo->id</td>";
         echo "<td>$tipo->nombre </td>";
         echo "<td>$tipo->descripcion </td>";
-        echo "<td>$tipo->ruta </td>";
+        echo "<td> <img class='rounded img-fluid' src=$tipo->ruta alt=´´></td>";
         ?>
         
         <td class="text-center">
         <div class='btn-group'>
         
-        <button id="see-language" name="see-language"type="button" class="btn btn-primary"
-                    data-toggle="modal" 
-                    data-target="#myModal">
+        <button id="see-language" name="see-language"type="button" class="btn btn-primary">             >
                     Ver
         </button>
         <button id="see-language" name="see-language"type="button" class="btn btn-success"

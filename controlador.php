@@ -23,6 +23,9 @@ if(isset($controller)){
             
                 $controller=new TipohabitacionController();
                 break;
+
+            case 'imagen':
+            $controller=new Imagen();
     
         }
         //llama a la acción del controlador
@@ -36,7 +39,7 @@ if(isset($controller)){
                         'usuario'=>['index','register','update', 'delete','login','registrarIndividual'],
                         'cliente'=>['registrarIndividual'],
                         'sesion'=>['login','logout'],
-                        'tipohabitacion'=>['index','listar','agregar','ver']
+                        'tipohabitacion'=>['index','listar','agregar','ver','agregarImagen']
                         );
     //verifica que el controlador enviado desde index.php esté dentro del arreglo controllers
     if (array_key_exists($controller, $controllers)) {

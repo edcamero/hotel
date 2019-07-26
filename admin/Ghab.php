@@ -88,6 +88,37 @@ if(isset($action)){
                                     </div>
                                     <input type="submit" name="add" value="Agregar Imagen" class="btn btn-primary"> 
                                 </form>
+                    
+                    
+                                   <!-- <form name="formulario-envia" id="formulario-envia" enctype="multipart/form.data" method="POST">
+                                    <table>
+                                        <tr>
+                                            <td>Nombre</td>
+                                            <td><input type="text" name="txtnom" id="txtnom"></td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>Imagen</td>
+                                            <td><input type="file" name="imagen" id="imagen"></td>
+                                            
+                                        </tr>
+
+                                        <tr>
+                                            
+                                            <td><input type="button" name="btn" id="btn" value="Cargar" onclick=registrar_imagen();></td>
+                                            
+                                        </tr>
+                                    </table>
+                                </form>-->
+                                <form action="<?php echo URL_PATH."admin/index.php?controller=tipohabitacion&action=agregarImagen&id=".$_GET['id'];?>" enctype="multipart/form-data" method="post">
+                                    <div class="form-group">
+                                        <label for="nombre">Nombre:</label> 
+                                        <input id="nombre" name="nombre" size="30" type="text">
+                                    </div>
+                                    <label for="imagen">Imagen:</label> 
+                                    <input id="imagen" name="imagen" size="30" type="file">
+                                    <input type="submit" value="Cambiar datos">
+                                    </form>
                 
                             </div>
                                 <!--/mostrar tabla-->   
@@ -110,7 +141,7 @@ if(isset($action)){
                 </div>
     </div>
 
-
+<script src="js/funciones.js"></script>
 
     <?php   # code...
     }

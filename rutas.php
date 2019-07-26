@@ -2,7 +2,7 @@
 define('ROOT_PATH', $_SERVER['DOCUMENT_ROOT'].'/hotel/');
 define('URL_PATH', 'http://localhost'.'/hotel/');
 define('ADMIN', ROOT_PATH.'admin/');
-define('IMG', ROOT_PATH.'img/');
+define('IMG', ROOT_PATH.'images/');
 define('CSS',ROOT_PATH.'css/');
 define('MODELS',ROOT_PATH.'models/');
 define('VIEW',ROOT_PATH.'view/');

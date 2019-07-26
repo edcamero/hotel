@@ -40,7 +40,7 @@
                     </li>
                         <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                       LISTAS
+                       Listas
                         </a>
                         <div class="dropdown-menu collapse  " aria-labelledby="navbarDropdown">
                             <ul class="nav flex-column ml-3">

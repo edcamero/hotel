@@ -1,24 +1,9 @@
-
-	<?php
-    
-    $mysqli=new mysqli("localhost","root","","nnn"); //servidor, usuario de base de datos, contraseña del usuario, nombre de base de datos
-    
-    if(mysqli_connect_errno()){
-        echo 'Conexion Fallida : ', mysqli_connect_error();
-        exit();
-    }
-    
-?>
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>LISTAR HABITACION</title>
 </head>
-<body>
+
 
 <br>
 <div>
@@ -26,6 +11,7 @@
 
 <div class="table table-responsive">
 	<table class=" table table-hover table-bordered table-striped table-condensed" >
+        <tr class="table-info">
 			<td>Id</td>
 			<td>Usuario</td>
 		

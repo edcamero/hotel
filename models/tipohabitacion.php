@@ -40,9 +40,27 @@ public static function listar(){
         
         $th= new Tipo_habitacion($tipo_habi['id'],$tipo_habi['nombre_tipo'], $tipo_habi['precio']);
         $th->id=$tipo_habi['id'];
-        $listaTipoHab[]=$th;
+        $th->imagenes=Imagen::buscarId($th->id);
+
+        //echo $th->imagenes[0]->nombre;
+        array_push ( $listaTipoHab , $th);
+        //$listaTipoHab[]=$th;
+        //echo $listaTipoHab[0]->imagenes[0]->nombre;
     }
     return $listaTipoHab;
+}
+
+
+
+public static function listar2(){
+    
+
+    $db=Conectar::conexion();
+    $sql=$db->query('SELECT * FROM tipo_habitacion');
+
+    // carga en la $listaPersonas cada registro desde la base de datos
+    
+    return $sql;
 }
 
 

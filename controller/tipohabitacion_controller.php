@@ -49,7 +49,7 @@ class TipohabitacionController
                 move_uploaded_file($_FILES['imagen']['tmp_name'],$directorio.$nombre_img);
 
                $tipo= Tipo_habitacion::buscarId($_GET['id']);
-               $foto=new Imagen($tipo->id,$_POST['nombre'],'',$directorio );
+               $foto=new Imagen($tipo->id,$_POST['nombre'],'','images/tipohab/'.$nombre_img);
               // $tipo::agregarImagen($foto);
                 Imagen::agregar($foto);
 

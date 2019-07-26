@@ -16,7 +16,7 @@
             <nav class="menu menu--iris">
                 <ul class="nav navbar-nav menu__list">
                     <li class="menu__item"><a href="uprincipal.php" class="menu__link scroll">Inicio</a></li>
-                    <li class="menu__item"><a href="habitaciones.php" class="menu__link scroll">Habitaciones</a></li>
+                    <li class="menu__item"><a href="uprincipal.php?controller=habitacion&action=index" class="menu__link scroll">Habitaciones</a></li>
                     <li class="menu__item"><a href="creserva.php" class="menu__link scroll">Reservar</a></li>
                     <li class="menu__item"><a href="uprincipal.php?controller=sesion&action=logout" class="menu__link scroll">cerrar sesion</a></li>
                 </ul>

@@ -23,6 +23,7 @@ if ($resultado==1) {
 	echo $resultado;
 	echo "Modificacion Finalizada";
 } else {
+	
 	echo "No se Modifico";
 
 }

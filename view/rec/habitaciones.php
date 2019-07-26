@@ -2,18 +2,11 @@
 session_start();
 //validmos que tenga permisos para ver la pagina
 
-
 ini_set("display_error", false);
 
 include ('../includes/conexion.php');
 
-if ($errorConexionDB == false) {
-	$cosultaReservacion = consultarReservaciones($mysqli);
-} else {
-	$cosultaReservacion = '<tr id="sinDatos">
-			<td colspan="8" class="centerTXT">ERROR AL CONECTAR CON LA BASE DE DATOS</td>
-	   	</tr>';
-}
+
  ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -27,18 +20,23 @@ if ($errorConexionDB == false) {
 		<!-- start: Mobile Specific -->
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!-- end: Mobile Specific -->
+
 		<!-- start: CSS -->
 		<link href="css/bootstrap.min.css" rel="stylesheet" />
 		<link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
 		<link href="css/style.min.css" rel="stylesheet" />
 		<link href="css/style-responsive.min.css" rel="stylesheet" />
 		<link href="css/retina.css" rel="stylesheet" />
+		<link type="text/css" href="css/master.css" rel="stylesheet" />
+		
+
+
 		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 		<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
 		<script type="text/javascript" src="js/jquery-validation-1.10.0/dist/jquery.validate.min.js"></script>
 		<script type="text/javascript" src="js/jquery-validation-1.10.0/lib/jquery.metadata.js"></script>
 		<script type="text/javascript" src="js/jquery-validation-1.10.0/localization/messages_es.js"></script>
-		<link type="text/css" href="css/master.css" rel="stylesheet" />
+		<script type="text/javascript" src="js/Reservaciones.js"></script>
 		<!-- end: CSS -->
 
 		<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -62,7 +60,7 @@ if ($errorConexionDB == false) {
 					<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a>
 					<a id="main-menu-toggle" class="hidden-phone open"><i class="icon-reorder"></i></a>
 					<div class="row-fluid">
-						<a class="brand span2" href="inicio.php"><span>Hotel</span></a>
+						<a class="brand span2" href="inicio.php"><span>REC</span></a>
 					</div>
 					<!-- start: Header Menu -->
 					<div class="nav-no-collapse header-nav">
@@ -127,29 +125,13 @@ if ($errorConexionDB == false) {
 					<div class="row-fluid">
 						<div class="box span12">
 							<div class="box-header" data-original-title="">
-								<h2><i class="icon-user"></i><span class="break"></span>Reservaciones</h2>
-								
+								<h2><i class="icon-user"></i><span class="break"></span>Habitaciones</h2>
+
 							</div>
-							<div id="" class="center addUser">
-		    					<a id="" class="btn btn-small btn-info" href="reservacionesadd.php"><i class="icon-plus"></i> Agregar Reservación</a>
-		    				</div>
 							<div class="box-content">
 								<table class="table table-striped table-bordered bootstrap-datatable datatable">
-									<thead>
-										<tr>
-											<th>Habitacion</th>
-											<th>Tipo</th>
-											<th>Cliente</th>
-											<th>Fecha de entrada</th>
-											<th>Fecha de salida</th>
-											<th>Num Adultos</th>
-											<th>Num Niños</th>
-											<th>Estado</th>
-											<th>Acciones</th>
-										</tr>
-									</thead>
+											 <?php require_once("listavhab.php");?>
 									<tbody id="listaUsuariosOk">
-										<?php echo $cosultaReservacion?>
 										
 									</tbody>
 								</table>
@@ -163,12 +145,7 @@ if ($errorConexionDB == false) {
 
 			</div><!--/fluid-row-->
 
-			<footer>
-				<p>
-					<span style="text-align:left;float:left">&copy; 2013 DJLabs</span>
-				</p>
-
-			</footer>
+		
 
 		</div><!--/.fluid-container-->
 

@@ -1,5 +1,6 @@
 <?php
 include ('../includes/conexion.php');
+
 $idres = $_GET['idres'];
 $IH = $_GET['IH'];
 $checkin = $_POST['checkin'];

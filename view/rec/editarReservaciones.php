@@ -27,6 +27,7 @@ if (mysql_num_rows($resultado)) {
 } else {
 	echo "Error...";
 	echo $resultado;
+	
 }
  ?>
  <!doctype html>

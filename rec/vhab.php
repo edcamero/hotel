@@ -34,7 +34,7 @@
                         <div class="col col-md-8 col-sm-8 row justify-content-center">
                             <div class="panel panel-primary">
                                 <div class="panel">
-                              <STRONG> USUARIOS</STRONG>
+                              <STRONG> Habitaciones</STRONG>
 
                 
                                 <!--/mostrar tabla-->   
@@ -42,7 +42,7 @@
                                 <div class="row">
                                 <div class=" col-md-12 col-sm-12 ">    
                                     <div class="panel">
-                                       <?php require_once("listausuario.php");?>
+                                       <?php require_once("listavhab.php");?>
                                    
                                     </div>
                                     </div>

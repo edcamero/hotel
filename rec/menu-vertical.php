@@ -45,7 +45,7 @@
                         <div class="dropdown-menu collapse  " aria-labelledby="navbarDropdown">
                             <ul class="nav flex-column ml-3">
                                     <li class="dropdown-item"><a  href="vusuario.php">Lista Usuario</a></li>
-                                    <li class="dropdown-item"><a " href="#">Another action</a></li>
+                                    <li class="dropdown-item"><a " href="vhab.php">Lista Habitaciones</a></li>
                                     <li class="dropdown-item"><a  href="#">Something else here</a></li>
                         
                             </ul>

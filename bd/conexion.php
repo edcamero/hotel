@@ -9,10 +9,10 @@
 		
 
 		public static function conexion(){
-				$bd="u535867201_hotel";
-				$usuario="u535867201_root";
-				$host="sql184.main-hosting.eu";
-				$password="123456";
+				$bd="hotel2";
+				$usuario="root";
+				$host="localhost";
+				$password="";
 			//$conexion=new mysqli("localhost", "root", "", "bd_hotel");
 			//$conexion->query("SET NAMES 'utf8'");
 			
@@ -22,10 +22,10 @@
 		}
 
 		public static function conexionMySql(){
-			$bd="u535867201_hotel";
-			$usuario="u535867201_root";
-			$host="sql184.main-hosting.eu";
-			$password="123456";
+			$bd="hotel2";
+			$usuario="root";
+			$host="localhost";
+			$password="";
 			
 			$conexion = new mysqli($host,$usuario,$password,$bd); 
 			$conexion->query("SET NAMES 'utf8'");

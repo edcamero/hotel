@@ -20,7 +20,7 @@
 		</tr>
 
 		<?php 
-        $conexion=new mysqli("localhost","root","","nnn");
+        $conexion=new mysqli("localhost","root","","hotel2");
 		$sql="SELECT * from persona";
 		$result=mysqli_query($conexion,$sql);
 

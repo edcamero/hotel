@@ -1,6 +1,6 @@
 <?php 
 
-	$conexion=mysqli_connect('localhost','root','','nnn');
+	$conexion=mysqli_connect('localhost','root','','hotel2');
 
  ?>
 

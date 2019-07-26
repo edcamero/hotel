@@ -30,18 +30,7 @@ class Cliente extends persona{
     }*/
 
 
-    public static function listar(){
-		$listaClientes =[];
-		$db=Conectar::conexion();
-		$sql=$db->query('SELECT * FROM cliente');
- 
-		// carga en la $listaPersonas cada registro desde la base de datos
-		foreach ($sql->fetchAll() as $cliente) {
-			$listaClientes[]= Cliente::construir($cliente['id'],$persona['id'], $persona['tipo_cliente_id'],$persona['usuario_id']);
-		}
-		return $listaPersonas;
-
-
+   
 
 
 

@@ -3,7 +3,7 @@
 define("servidor", "127.0.0.1");
 define("userdb", "root");
 define("passdb", "");
-define("bd", "nnn");
+define("bd", "hotel2");
 define("puerto","3306");
 // Variable que indica el status de la conexión a la base de datos
 
@@ -44,7 +44,7 @@ $link = Conectarse();
 
 
 function buscarClientes($conexionDB,$id){
-	 $conexionDB=new mysqli("localhost","root","","nnn");
+	 $conexionDB=new mysqli("localhost","root","","hotel2");
 	$salida = '';
 
 	$consulta = $conexionDB -> query("SELECT id, nombres,apellidos,correo FROM persona  WHERE nombres LIKE '%$id%' ");

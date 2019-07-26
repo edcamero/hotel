@@ -32,7 +32,7 @@ class Reserva{
 		$select->execute();
 		//asignarlo al objeto usuario
 		$consulta=$select->fetch();
-        $id=$consulta['id']+1;
+        $id=$consulta['id'];
         return $id;
 	}
 

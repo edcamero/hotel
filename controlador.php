@@ -8,7 +8,7 @@ if(isset($controller)){
         
         require_once(CONTROLLER . $controller . '_controller.php');
         //crea el controlador
-        
+        //echo $controller;
         switch($controller){
             case 'usuario':
                 $controller= new UsuarioController();
@@ -30,6 +30,10 @@ if(isset($controller)){
 
             case 'habitacion':
             $controller=new HabitacionController();
+                break;
+            case 'reserva':
+           
+            $controller=new ReservaController();
     
         }
         //llama a la acción del controlador
@@ -44,7 +48,8 @@ if(isset($controller)){
                         'cliente'=>['registrarIndividual'],
                         'sesion'=>['login','logout'],
                         'tipohabitacion'=>['index','listar','agregar','ver','agregarImagen'],
-                        'habitacion'=>['index']
+                        'habitacion'=>['index'],
+                        'reserva'=>['agregar']
                         );
     //verifica que el controlador enviado desde index.php esté dentro del arreglo controllers
     if (array_key_exists($controller, $controllers)) {

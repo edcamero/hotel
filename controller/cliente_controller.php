@@ -2,7 +2,9 @@
 require_once(DB."/conexion.php");
 require_once(MODELS . $controller . '.php');
 include 'funciones/funciones.php';
-class ClienteController{	
+class ClienteController{
+	
+	
 	public $errors=array(1    => "",);
     public function registrarIndividual(){
         if(!empty($_POST))

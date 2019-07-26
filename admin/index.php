@@ -10,6 +10,11 @@ if(!isset($_SESSION)) {
 			if($_SESSION['rol']==3){
 				header("location:".URL_PATH."uprincipal.php");
 			}
+			if($_SESSION['rol']==2){
+				header("location:".URL_PATH."sec.php.php");
+			}
+			
+
 			
 			if($_SESSION['rol']==1){
                
